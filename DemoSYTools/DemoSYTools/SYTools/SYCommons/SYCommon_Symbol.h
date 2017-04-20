@@ -14,6 +14,9 @@
 /// 分隔或拼接符号，逗号
 static NSString *const kSymbolMarkComma              = @",";
 
+/// 分隔或拼接符号，冒号 add by zhangshaoyu 2017-04-21
+static NSString *const kSymbolMarkColon              = @":";
+
 /// 分隔或拼接符号，竖线
 static NSString *const kSymbolMarkline               = @"|";
 
