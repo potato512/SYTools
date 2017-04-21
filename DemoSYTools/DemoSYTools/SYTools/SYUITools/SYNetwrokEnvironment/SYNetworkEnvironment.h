@@ -31,7 +31,7 @@
 
 
 /// 网络环境（0为测试环境；1为线上环境）
-@property (nonatomic, assign) BOOL networkEnviroment;
+@property (nonatomic, assign) int networkEnviroment;
 /// 测试环境地址（默认地址）
 @property (nonatomic, strong) NSString *networkServiceDebug;
 /// 线上环境地址（线上地址）
@@ -81,7 +81,7 @@
  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
  {
      // Override point for customization after application launch.
- 
+     
      // 标题按钮设置
      NetworkRequestEnvironment.titleFont = [UIFont systemFontOfSize:13.0];
      NetworkRequestEnvironment.titleColorNormal = [UIColor blackColor];
@@ -93,7 +93,7 @@
      NetworkRequestEnvironment.networkServiceDebugDict = @{@"天猫":@"http://www.tiaomiao.com",@"淘宝":@"http://www.taobao.com",@"京东":@"http://www.jindong.com"};
      // 初始化
      [NetworkRequestEnvironment initializeNetworkEnvironment];
- 
+     
      return YES;
  }
  

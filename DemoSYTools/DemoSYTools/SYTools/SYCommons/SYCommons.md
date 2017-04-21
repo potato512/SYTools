@@ -2,7 +2,7 @@
 [SYCommons常用宏定义](https://github.com/potato512/SYCategory/tree/master/SYCommons)
 
 
-# 20170421
+# 20170420
 * SYCommon_Symbole添加冒号符
 
 # 20170413

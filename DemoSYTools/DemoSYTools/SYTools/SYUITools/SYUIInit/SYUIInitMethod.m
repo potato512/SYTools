@@ -242,13 +242,13 @@ void WebViewRequestWithCookie(UIWebView *web, NSString *strURL, NSString *cookie
 
 #pragma mark - UIbutton
 
-UIButton *InsertButton(UIView *superView, CGRect rect, int tag, NSString *titleNormal, NSString *titleSelected, UIColor *titleColorNormal, UIColor *titleColorHighlight, UIColor *titleColorSelected, UIFont *titleFont, UIEdgeInsets titleEdge, UIImage *imageNormal, UIImage *imageSelected, UIEdgeInsets imageEdge, UIImage *bgImageNormal, UIImage *bgImageHighlight, UIImage *bgImageSelected, BOOL selected, id target, SEL action)
+UIButton *InsertButton(UIView *superView, CGRect rect, int tag, NSString *titleNormal, NSString *titleSelected, UIColor *titleColorNormal, UIColor *titleColorHighlight, UIColor *titleColorSelected, UIFont *titleFont, UIEdgeInsets titleEdge, UIImage *imageNormal, UIImage *imageHighlight, UIImage *imageSelected, UIEdgeInsets imageEdge, UIImage *bgImageNormal, UIImage *bgImageHighlight, UIImage *bgImageSelected, BOOL selected, id target, SEL action)
 {
-	UIButton *button = [[[UIButton alloc] init] autorelease];
+    UIButton *button = [[[UIButton alloc] init] autorelease];
     button.backgroundColor = [UIColor clearColor];
     button.frame = rect;
     [button setTag:tag];
-	[button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     button.selected = selected;
     
     if (titleNormal)
@@ -281,6 +281,10 @@ UIButton *InsertButton(UIView *superView, CGRect rect, int tag, NSString *titleN
     {
         [button setImage:imageNormal forState:UIControlStateNormal];
     }
+    if (imageHighlight)
+    {
+        [button setImage:imageHighlight forState:UIControlStateHighlighted];
+    }
     if (imageSelected)
     {
         [button setImage:imageSelected forState:UIControlStateSelected];
@@ -299,7 +303,7 @@ UIButton *InsertButton(UIView *superView, CGRect rect, int tag, NSString *titleN
     {
         [button setBackgroundImage:bgImageSelected forState:UIControlStateSelected];
     }
-	
+    
     if (superView)
     {
         [superView addSubview:button];
@@ -310,27 +314,27 @@ UIButton *InsertButton(UIView *superView, CGRect rect, int tag, NSString *titleN
 
 UIButton *InsertButtonWithTitle(UIView *superView, CGRect rect, int tag, NSString *titleNormal, NSString *titleSelected, UIColor *titleColorNormal, UIColor *titleColorHighlight, UIColor *titleColorSelected, UIFont *titleFont, id target, SEL action)
 {
-    return InsertButton(superView, rect, tag, titleNormal, titleSelected, titleColorNormal, titleColorHighlight, titleColorSelected, titleFont, UIEdgeInsetsZero, nil, nil, UIEdgeInsetsZero, nil, nil, nil, NO, target, action);
+    return InsertButton(superView, rect, tag, titleNormal, titleSelected, titleColorNormal, titleColorHighlight, titleColorSelected, titleFont, UIEdgeInsetsZero, nil, nil, nil, UIEdgeInsetsZero, nil, nil, nil, NO, target, action);
 }
 
-UIButton *InsertButtonWithTitleAndImage(UIView *superView, CGRect rect, int tag, NSString *titleNormal, NSString *titleSelected, UIEdgeInsets titleEdge, UIFont *font, UIColor *colorNormal, UIColor *colorHighlight, UIColor *colorSelected, UIImage *imageNormal, UIImage *imageSelected, UIEdgeInsets imageEdge, id target, SEL action)
+UIButton *InsertButtonWithTitleAndImage(UIView *superView, CGRect rect, int tag, NSString *titleNormal, NSString *titleSelected, UIEdgeInsets titleEdge, UIFont *font, UIColor *colorNormal, UIColor *colorHighlight, UIColor *colorSelected, UIImage *imageNormal, UIImage *imageHighlight, UIImage *imageSelected, UIEdgeInsets imageEdge, id target, SEL action)
 {
-    return InsertButton(superView, rect, tag, titleNormal, titleSelected, colorNormal, colorHighlight, colorSelected, font, UIEdgeInsetsZero, imageNormal, imageSelected, UIEdgeInsetsZero, nil, nil, nil, NO, target, action);
+    return InsertButton(superView, rect, tag, titleNormal, titleSelected, colorNormal, colorHighlight, colorSelected, font, UIEdgeInsetsZero, imageNormal, imageHighlight, imageSelected, UIEdgeInsetsZero, nil, nil, nil, NO, target, action);
 }
 
 UIButton *InsertButtonWithTitleAndBgroundImage(UIView *superview, CGRect rect, int tag, NSString *titleNormal, NSString *titleSelected, UIEdgeInsets titleEdge, UIFont *font, UIColor *colorNormal, UIColor *colorHighlight, UIColor *colorSelected, UIImage *bgImageNormal, UIImage *bgImageHighlight, UIImage *bgImageSelected, BOOL selected, id target, SEL action)
 {
-    return InsertButton(superview, rect, tag, titleNormal, titleSelected, colorNormal, colorHighlight, colorSelected, font, titleEdge, nil, nil, UIEdgeInsetsZero, bgImageNormal, bgImageHighlight, bgImageSelected, selected, target, action);
+    return InsertButton(superview, rect, tag, titleNormal, titleSelected, colorNormal, colorHighlight, colorSelected, font, titleEdge, nil, nil, nil, UIEdgeInsetsZero, bgImageNormal, bgImageHighlight, bgImageSelected, selected, target, action);
 }
 
 UIButton *InsertButtonWithBgroundImage(UIView *superview, CGRect rect, int tag, UIImage *bgImageNormal, UIImage *bgImageHighlight, UIImage *bgImageSelected, BOOL selected, id target, SEL action)
 {
-    return InsertButton(superview, rect, tag, nil, nil, nil, nil, nil, nil, UIEdgeInsetsZero, nil, nil, UIEdgeInsetsZero, bgImageNormal, bgImageHighlight, bgImageSelected, selected, target, action);
+    return InsertButton(superview, rect, tag, nil, nil, nil, nil, nil, nil, UIEdgeInsetsZero, nil, nil, nil, UIEdgeInsetsZero, bgImageNormal, bgImageHighlight, bgImageSelected, selected, target, action);
 }
 
-UIButton *InsertButtonWithImage(UIView *superview, CGRect rect, UIImage *imageNormal, UIImage *imageSelected, BOOL selected, int tag, id target, SEL action)
+UIButton *InsertButtonWithImage(UIView *superview, CGRect rect, UIImage *imageNormal, UIImage *imageHighlight, UIImage *imageSelected, BOOL selected, int tag, id target, SEL action)
 {
-    return InsertButton(superview, rect, tag, nil, nil, nil, nil, nil, nil, UIEdgeInsetsZero, imageNormal, imageSelected, UIEdgeInsetsZero, nil, nil, nil, selected, target, action);
+    return InsertButton(superview, rect, tag, nil, nil, nil, nil, nil, nil, UIEdgeInsetsZero, imageNormal, imageHighlight, imageSelected, UIEdgeInsetsZero, nil, nil, nil, selected, target, action);
 }
 
 #pragma mark - UITableView
@@ -600,9 +604,9 @@ UIBarButtonItem *InsetBarButtonItemWithImage(UIImage *image, int tag, UIBarButto
     return buttonItem;
 }
 
-UIBarButtonItem *InsertBarButtonItemWithButton(CGRect rect, int tag, NSString *titleNormal, NSString *titleSelected, UIFont *titleFont, UIColor *titleColorNormal, UIColor *titleColorHighlight, UIColor *titleColorSelected, UIEdgeInsets titleEdge, UIImage *imageNormal, UIImage *imageSelected, UIEdgeInsets imageEdge, UIImage *bgImageNormal, UIImage *bgImageHighlight, UIImage *bgImageSelected, BOOL selected, id target, SEL action)
+UIBarButtonItem *InsertBarButtonItemWithButton(CGRect rect, int tag, NSString *titleNormal, NSString *titleSelected, UIFont *titleFont, UIColor *titleColorNormal, UIColor *titleColorHighlight, UIColor *titleColorSelected, UIEdgeInsets titleEdge, UIImage *imageNormal, UIImage *imageHighlight, UIImage *imageSelected, UIEdgeInsets imageEdge, UIImage *bgImageNormal, UIImage *bgImageHighlight, UIImage *bgImageSelected, BOOL selected, id target, SEL action)
 {
-    UIButton *button = InsertButton(nil, rect, tag, titleNormal, titleSelected, titleColorNormal, titleColorHighlight, titleColorSelected, titleFont, titleEdge, imageNormal, imageSelected, imageEdge, bgImageNormal, bgImageHighlight, bgImageSelected, selected, target, action);
+    UIButton *button = InsertButton(nil, rect, tag, titleNormal, titleSelected, titleColorNormal, titleColorHighlight, titleColorSelected, titleFont, titleEdge, imageNormal, imageHighlight, imageSelected, imageEdge, bgImageNormal, bgImageHighlight, bgImageSelected, selected, target, action);
     
     UIBarButtonItem *barButtonItem = [[[UIBarButtonItem alloc] initWithCustomView:button] autorelease];
     

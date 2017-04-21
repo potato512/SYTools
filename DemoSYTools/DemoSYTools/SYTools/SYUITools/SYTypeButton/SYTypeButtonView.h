@@ -25,6 +25,8 @@ static NSString *const keyImageSelectedDouble = @"keyImageSelectedDouble";
 
 /// 字体大小（默认12。设置标题后设置）
 @property (nonatomic, strong) UIFont *titleFont;
+/// 选中后字体大小（默认12。设置标题后设置）
+@property (nonatomic, strong) UIFont *titleFontSelected;
 
 /// 按钮标题数组
 @property (nonatomic, strong) NSArray *titles;

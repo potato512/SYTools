@@ -93,8 +93,8 @@ static NSString *const keyNetworkEnvironmentOhter   = @"keyNetworkEnvironmentOht
         if ([key isEqualToString:keyNetworkEnvironment])
         {
             // 网络环境
-            NSString *value = [self.environmentDict objectForKey:key];
-            self.isPublicNetworkEnvironment = value.integerValue;
+            NSNumber *value = [self.environmentDict objectForKey:key];
+            self.isPublicNetworkEnvironment = value.intValue;
         }
         else if ([key isEqualToString:keyNetworkEnvironmentDevelop])
         {
@@ -132,7 +132,9 @@ static NSString *const keyNetworkEnvironmentOhter   = @"keyNetworkEnvironmentOht
 - (void)setDefaultNetwork
 {
     NSString *networkName = [self getDefaultNetworkName];
-    NSArray *nameArray = self.environmentDict.allKeys;
+    // bug-网络名称设置异常 修复 modify zhangshaoyu 20170422
+//    NSArray *nameArray = self.environmentDict.allKeys;
+    NSArray *nameArray = self.networkDict.allKeys;
     
     for (NSString *name in nameArray)
     {
@@ -329,7 +331,7 @@ static NSString *const keyNetworkEnvironmentOhter   = @"keyNetworkEnvironmentOht
 
 #pragma mark - setter
 
-- (void)setNetworkEnviroment:(BOOL)networkEnviroment
+- (void)setNetworkEnviroment:(int)networkEnviroment
 {
     NSNumber *number = @(networkEnviroment);
     [self.environmentDict setObject:number forKey:keyNetworkEnvironment];

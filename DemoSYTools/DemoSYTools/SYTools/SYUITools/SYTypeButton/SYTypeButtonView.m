@@ -32,6 +32,9 @@ static NSInteger const tagButton = 1000;
         rect.size.height = heightTypeButtonView;
         self.frame = rect;
         
+        _titleFont = [UIFont systemFontOfSize:12.0];
+        _titleFontSelected = [UIFont systemFontOfSize:12.0];
+        
         if (view)
         {
             [view addSubview:self];
@@ -54,9 +57,9 @@ static NSInteger const tagButton = 1000;
         CGRect rect = CGRectMake(i * width, 0.0, width, CGRectGetHeight(self.bounds));
         
         SYButton *button = [SYButton buttonWithType:UIButtonTypeCustom];
-        button.backgroundColor = kColorClear;
-        [button setTitleColor:kColorBlack forState:UIControlStateNormal];
-        [button setTitleColor:kColorOrange forState:UIControlStateSelected];
+        button.backgroundColor = [UIColor clearColor];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor orangeColor] forState:UIControlStateSelected];
         [button setTitle:title forState:UIControlStateNormal];
         button.frame = rect;
 //        [button setImage:kImageWithName(@"accessoryArrow_down") forState:UIControlStateNormal];
@@ -76,7 +79,10 @@ static NSInteger const tagButton = 1000;
     button.userInteractionEnabled = NO;
     button.selected = YES;
     
-    self.lineView = InsertView(self, CGRectMake(0.0, (CGRectGetHeight(self.bounds) - 1.0), width, 2.0), kColorRed, 0.0, nil, 0.0);
+    self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0.0, (CGRectGetHeight(self.bounds) - 1.0), width, 2.0)];
+    [self addSubview:self.lineView];
+    self.lineView.backgroundColor = [UIColor redColor];
+    
     self.lineView.hidden = !self.showScrollLine;
 }
 
@@ -106,6 +112,18 @@ static NSInteger const tagButton = 1000;
 
 - (void)buttonAction:(UIButton *)button
 {
+    [self buttonActionLine:button];
+    [self buttonActionStatus:button];
+    
+    if (self.buttonClick)
+    {
+        NSInteger index = button.tag - tagButton;
+        self.buttonClick(index, self.isDescending);
+    }
+}
+
+- (void)buttonActionLine:(UIButton *)button
+{
     if (self.showScrollLine)
     {
         self.lineView.hidden = NO;
@@ -121,13 +139,18 @@ static NSInteger const tagButton = 1000;
             self.lineView.frame = rect;
         }];
     }
-    
+}
+
+- (void)buttonActionStatus:(UIButton *)button
+{
     button.userInteractionEnabled = !button.userInteractionEnabled;
     button.selected = !button.selected;
+    button.titleLabel.font = (button.selected ? _titleFontSelected : _titleFont);
     
     SYButton *previousButton = (SYButton *)[self viewWithTag:self.previousTag];
     previousButton.userInteractionEnabled = YES;
     previousButton.selected = ([previousButton isEqual:button] ? button.selected : NO);
+    previousButton.titleLabel.font = (previousButton.selected ? _titleFontSelected : _titleFont);
     self.previousTag = button.tag;
     
     NSString *title = button.titleLabel.text;
@@ -144,12 +167,6 @@ static NSInteger const tagButton = 1000;
         [button setImage:(self.isDescending ? imageSelected : imageSelectedDouble) forState:UIControlStateSelected];
     }
     self.previousTitle = title;
-    
-    if (self.buttonClick)
-    {
-        NSInteger index = button.tag - tagButton;
-        self.buttonClick(index, self.isDescending);
-    }
 }
 
 #pragma mark - setter
@@ -205,7 +222,20 @@ static NSInteger const tagButton = 1000;
         for (int i = 0; i < _titles.count; i++)
         {
             SYButton *button = (SYButton *)[self viewWithTag:i + tagButton];
-            button.titleLabel.font = _titleFont;
+            button.titleLabel.font = (button.selected ? _titleFontSelected : _titleFont);
+        }
+    }
+}
+
+- (void)setTitleFontSelected:(UIFont *)titleFontSelected
+{
+    _titleFontSelected = titleFontSelected;
+    if (_titleFontSelected)
+    {
+        for (int i = 0; i < _titles.count; i++)
+        {
+            SYButton *button = (SYButton *)[self viewWithTag:i + tagButton];
+            button.titleLabel.font = (button.selected ? _titleFontSelected : _titleFont);
         }
     }
 }
@@ -213,18 +243,20 @@ static NSInteger const tagButton = 1000;
 - (void)setSelectedIndex:(NSInteger)selectedIndex
 {
     _selectedIndex = selectedIndex;
-
+    
     SYButton *button = (SYButton *)[self viewWithTag:_selectedIndex + tagButton];
     if (button)
     {
-        [self buttonAction:button];
+        // 改变按钮状态，不响应交互事件
+        [self buttonActionStatus:button];
+        [self buttonActionLine:button];
     }
 }
 
 /// 重置按钮标题
 - (void)setTitleButton:(NSString *)title index:(NSInteger)index
 {
-    if ([NSString isNullNSString:title] || (0 > index || (self.subviews.count - 1) <= index))
+    if ((!title || 0 >= title.length) || (0 > index || (self.subviews.count - 1) <= index))
     {
         return;
     }

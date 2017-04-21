@@ -84,6 +84,39 @@
 }
 
 
+/**
+ *  加载网页（URL网址）
+ *
+ *  @param URL 网址
+ */
+- (void)loadRequestWithURL:(NSURL *)url
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:30];
+    [self loadRequest:request];
+}
+
+/**
+ *  加载网页（NSString网址）
+ *
+ *  @param urlStr 网址
+ */
+- (void)loadRequestWithURLStr:(NSString *)urlStr
+{
+    NSURL *URL = [NSURL URLWithString:urlStr];
+    [self loadRequestWithURL:URL];
+}
+
+/**
+ *  加载本地网页（NSString）
+ *
+ *  @param html 网页字符串
+ */
+- (void)loadRequestWithHTML:(NSString *)html
+{
+    NSString *htmlTmp = ((html && 0 < html.length) ? html : @"<html></html>");
+    [self loadHTMLString:htmlTmp baseURL:nil];
+}
+
 /// 响应回调
 - (void)webViewStart:(void (^)(void))startBlock finish:(void (^)(void))finishBlock failue:(void (^)(void))failueBlock
 {
