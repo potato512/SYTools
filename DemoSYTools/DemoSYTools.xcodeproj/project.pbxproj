@@ -50,6 +50,7 @@
 		A7637A781EA0B0890096433D /* SYUIInitMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A521EA0B0890096433D /* SYUIInitMethod.m */; };
 		A7637A791EA0B0890096433D /* SYUITools.md in Sources */ = {isa = PBXBuildFile; fileRef = A7637A531EA0B0890096433D /* SYUITools.md */; };
 		A7637A7A1EA0B0890096433D /* SYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A561EA0B0890096433D /* SYWebView.m */; };
+		A78E9D6B1EAF43DF003D1949 /* SYNumberEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D6A1EAF43DF003D1949 /* SYNumberEditView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,8 @@
 		A7637A541EA0B0890096433D /* SYUIToolsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUIToolsHeader.h; sourceTree = "<group>"; };
 		A7637A551EA0B0890096433D /* SYWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWebView.h; sourceTree = "<group>"; };
 		A7637A561EA0B0890096433D /* SYWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWebView.m; sourceTree = "<group>"; };
+		A78E9D691EAF43DF003D1949 /* SYNumberEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNumberEditView.h; sourceTree = "<group>"; };
+		A78E9D6A1EAF43DF003D1949 /* SYNumberEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNumberEditView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,6 +383,7 @@
 		A7637A1F1EA0B0890096433D /* SYUITools */ = {
 			isa = PBXGroup;
 			children = (
+				A78E9D681EAF43DF003D1949 /* SYNumberEditView */,
 				A7637A201EA0B0890096433D /* SYCollectionView.h */,
 				A7637A211EA0B0890096433D /* SYCollectionView.m */,
 				A7637A221EA0B0890096433D /* SYCountDownButton.h */,
@@ -489,6 +493,15 @@
 				A7637A521EA0B0890096433D /* SYUIInitMethod.m */,
 			);
 			path = SYUIInit;
+			sourceTree = "<group>";
+		};
+		A78E9D681EAF43DF003D1949 /* SYNumberEditView */ = {
+			isa = PBXGroup;
+			children = (
+				A78E9D691EAF43DF003D1949 /* SYNumberEditView.h */,
+				A78E9D6A1EAF43DF003D1949 /* SYNumberEditView.m */,
+			);
+			path = SYNumberEditView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -659,6 +672,7 @@
 				A730097D1EAA0CE200439631 /* SYNetworkEnvironmentView.m in Sources */,
 				A7637A731EA0B0890096433D /* SYTableView.m in Sources */,
 				A7637A5F1EA0B0890096433D /* HUDManager.m in Sources */,
+				A78E9D6B1EAF43DF003D1949 /* SYNumberEditView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

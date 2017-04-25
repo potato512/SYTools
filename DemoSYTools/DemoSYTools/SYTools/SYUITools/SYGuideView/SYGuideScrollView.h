@@ -32,6 +32,9 @@ typedef NS_ENUM(NSInteger, SYGuideAnimationType)
 /// 消失动画（直接消失，或向四周放大淡化消失，或向中间缩小淡化消失；默认直接消失）
 @property (nonatomic, assign) SYGuideAnimationType animationType;
 
+/// 消失动画时间（默认0.3秒）add by zhangshaoyu 20170425
+@property (nonatomic, assign) NSTimeInterval animationTime;
+
 /************************************************************/
 
 /// 是否首次使用

@@ -7,6 +7,7 @@
 //
 
 #import "SYCollectionView.h"
+#import "SYNetworkStatusView.h"
 
 @interface SYCollectionView ()
 

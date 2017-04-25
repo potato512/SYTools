@@ -18,6 +18,7 @@
 #import "SYNetworkEnvironment.h"
 #import "SYNetworkStatusView.h"
 #import "SYWithoutNetworkView.h"
+#import "SYNumberEditView.h"
 
 #import "SYWebView.h"
 #import "SYTextView.h"

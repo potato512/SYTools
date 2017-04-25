@@ -2,6 +2,15 @@
 UI工具集，基于第三方框架和SYCategory类封装实现。
 
 ## 修复完善
+# 20170425
+* SYGuideScrollView添加动画时间属性
+~~~ javascript
+/// 消失动画时间（默认0.3秒）add by zhangshaoyu 20170425
+@property (nonatomic, assign) NSTimeInterval animationTime;
+~~~
+* 新增数量编辑控件SYNumberEditView
+
+
 # 20170424
 * SYTypeButton修改bug
   * 导航动画线初始化时显示bug

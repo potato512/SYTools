@@ -49,6 +49,7 @@ static NSString *const image6P = @"_1242x2208";
         self.bounces = NO;
         self.userInteractionEnabled = YES;
         
+        _animationTime = 0.3;
         [self setUIWithImages:array];
     }
     
@@ -113,7 +114,7 @@ static NSString *const image6P = @"_1242x2208";
         // 放大淡化再消失
         UIImageView *imageview = self.imageviewArray.lastObject;
         
-        [UIView animateWithDuration:kAnimationsTime animations:^{
+        [UIView animateWithDuration:_animationTime animations:^{
             imageview.transform = CGAffineTransformMakeScale(1.6, 1.6);
             imageview.alpha = 0.0;
         } completion:^(BOOL finished) {
@@ -125,7 +126,7 @@ static NSString *const image6P = @"_1242x2208";
         // 缩小淡化再消失
         UIImageView *imageview = self.imageviewArray.lastObject;
         
-        [UIView animateWithDuration:kAnimationsTime animations:^{
+        [UIView animateWithDuration:_animationTime animations:^{
             imageview.transform = CGAffineTransformMakeScale(0.3, 0.3);
             imageview.alpha = 0.0;
         } completion:^(BOOL finished) {
