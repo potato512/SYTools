@@ -2,6 +2,10 @@
 UI工具集，基于第三方框架和SYCategory类封装实现。
 
 ## 修复完善
+# 20170424
+* SYTypeButton修改bug
+  * 导航动画线初始化时显示bug
+
 # 20170422
 * SYNetworkEnvironment修复bug
 * SYWebView添加方法
