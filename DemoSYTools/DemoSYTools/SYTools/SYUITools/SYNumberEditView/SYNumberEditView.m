@@ -74,6 +74,18 @@ static NSString *const limitNumberText = @"0123456789";
 
 - (void)initializeInfo
 {
+    _reduceTitleNormal = @"-";
+//    _reduceTitleHighlight = @"-";
+    _reduceFont = [UIFont systemFontOfSize:12.0];
+    _reduceTitleColorNormal = [UIColor blackColor];
+    _reduceTitleColorHighlight = [UIColor redColor];
+    
+    _addTitleNormal = @"+";
+//    _addTitleHighlight = @"+";
+    _addFont = [UIFont systemFontOfSize:12.0];
+    _addTitleColorNormal = [UIColor blackColor];
+    _addTitleColorHighlight = [UIColor redColor];
+    
     _textFont = [UIFont systemFontOfSize:12.0];
     _textColor = [UIColor blackColor];
     
@@ -218,10 +230,11 @@ static NSString *const limitNumberText = @"0123456789";
     {
         _buttonReduce = [UIButton buttonWithType:UIButtonTypeCustom];
         _buttonReduce.backgroundColor = [UIColor clearColor];
-        [_buttonReduce setTitle:@"-" forState:UIControlStateNormal];
-        [_buttonReduce setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_buttonReduce setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-        _buttonReduce.titleLabel.font = [UIFont systemFontOfSize:12.0];
+        [_buttonReduce setTitle:_reduceTitleNormal forState:UIControlStateNormal];
+        [_buttonReduce setTitle:_reduceTitleNormal forState:UIControlStateHighlighted];
+        [_buttonReduce setTitleColor:_reduceTitleColorNormal forState:UIControlStateNormal];
+        [_buttonReduce setTitleColor:_reduceTitleColorHighlight forState:UIControlStateHighlighted];
+        _buttonReduce.titleLabel.font = _reduceFont;
         [_buttonReduce addTarget:self action:@selector(buttonReduceClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _buttonReduce;
@@ -233,10 +246,11 @@ static NSString *const limitNumberText = @"0123456789";
     {
         _buttonAddMore = [UIButton buttonWithType:UIButtonTypeCustom];
         _buttonAddMore.backgroundColor = [UIColor clearColor];
-        [_buttonAddMore setTitle:@"+" forState:UIControlStateNormal];
-        [_buttonAddMore setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [_buttonAddMore setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-        _buttonAddMore.titleLabel.font = [UIFont systemFontOfSize:12.0];
+        [_buttonAddMore setTitle:_addTitleNormal forState:UIControlStateNormal];
+        [_buttonAddMore setTitle:_addTitleNormal forState:UIControlStateHighlighted];
+        [_buttonAddMore setTitleColor:_addTitleColorNormal forState:UIControlStateNormal];
+        [_buttonAddMore setTitleColor:_addTitleColorHighlight forState:UIControlStateHighlighted];
+        _buttonAddMore.titleLabel.font = _addFont;
         [_buttonAddMore addTarget:self action:@selector(buttonAddMoreClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _buttonAddMore;
@@ -250,6 +264,7 @@ static NSString *const limitNumberText = @"0123456789";
         _textField.backgroundColor = [UIColor clearColor];
         _textField.font = _textFont;
         _textField.textColor = _textColor;
+        _textField.text = @"0";
         _textField.textAlignment = NSTextAlignmentCenter;
         _textField.returnKeyType = UIReturnKeyDone;
         _textField.delegate = self;
@@ -279,6 +294,8 @@ static NSString *const limitNumberText = @"0123456789";
 
 #pragma mark - setter
 
+#pragma mark 减按钮
+
 - (void)setReduceImageNormal:(UIImage *)reduceImageNormal
 {
     _reduceImageNormal = reduceImageNormal;
@@ -299,6 +316,54 @@ static NSString *const limitNumberText = @"0123456789";
     }
 }
 
+- (void)setReduceTitleNormal:(NSString *)reduceTitleNormal
+{
+    _reduceTitleNormal = reduceTitleNormal;
+    if (_reduceTitleNormal)
+    {
+        [self.buttonReduce setTitle:_reduceTitleNormal forState:UIControlStateNormal];
+        [self.buttonReduce setTitle:(_reduceTitleHighlight ? _reduceTitleHighlight : _reduceTitleNormal) forState:UIControlStateHighlighted];
+    }
+}
+
+- (void)setReduceTitleHighlight:(NSString *)reduceTitleHighlight
+{
+    _reduceTitleHighlight = reduceTitleHighlight;
+    if (_reduceTitleHighlight)
+    {
+        [self.buttonReduce setTitle:_reduceTitleHighlight forState:UIControlStateHighlighted];
+    }
+}
+
+- (void)setReduceFont:(UIFont *)reduceFont
+{
+    _reduceFont = reduceFont;
+    if (_reduceFont)
+    {
+        self.buttonReduce.titleLabel.font = _reduceFont;
+    }
+}
+
+- (void)setReduceTitleColorNormal:(UIColor *)reduceTitleColorNormal
+{
+    _reduceTitleColorNormal = reduceTitleColorNormal;
+    if (_reduceTitleColorNormal)
+    {
+        [self.buttonReduce setTitleColor:_reduceTitleColorNormal forState:UIControlStateNormal];
+    }
+}
+
+- (void)setReduceTitleColorHighlight:(UIColor *)reduceTitleColorHighlight
+{
+    _reduceTitleColorHighlight = reduceTitleColorHighlight;
+    if (_reduceTitleColorHighlight)
+    {
+        [self.buttonReduce setTitleColor:_reduceTitleColorHighlight forState:UIControlStateHighlighted];
+    }
+}
+
+#pragma mark 加按钮
+
 - (void)setAddImageNormal:(UIImage *)addImageNormal
 {
     _addImageNormal = addImageNormal;
@@ -318,6 +383,54 @@ static NSString *const limitNumberText = @"0123456789";
         [self.buttonAddMore setImage:_addImageHighlight forState:UIControlStateHighlighted];
     }
 }
+
+- (void)setAddTitleNormal:(NSString *)addTitleNormal
+{
+    _addTitleNormal = addTitleNormal;
+    if (_addTitleNormal)
+    {
+        [self.buttonAddMore setTitle:_addTitleNormal forState:UIControlStateNormal];
+        [self.buttonAddMore setTitle:(_addTitleHighlight ? _addTitleHighlight : _addTitleNormal) forState:UIControlStateHighlighted];
+    }
+}
+
+- (void)setAddTitleHighlight:(NSString *)addTitleHighlight
+{
+    _addTitleHighlight = addTitleHighlight;
+    if (_addTitleHighlight)
+    {
+        [self.buttonAddMore setTitle:_addTitleHighlight forState:UIControlStateHighlighted];
+    }
+}
+
+- (void)setAddFont:(UIFont *)addFont
+{
+    _addFont = addFont;
+    if (_addFont)
+    {
+        self.buttonAddMore.titleLabel.font = _addFont;
+    }
+}
+
+- (void)setAddTitleColorNormal:(UIColor *)addTitleColorNormal
+{
+    _addTitleColorNormal = addTitleColorNormal;
+    if (_addTitleColorNormal)
+    {
+        [self.buttonAddMore setTitleColor:_addTitleColorNormal forState:UIControlStateNormal];
+    }
+}
+
+- (void)setAddTitleColorHighlight:(UIColor *)addTitleColorHighlight
+{
+    _addTitleColorHighlight = addTitleColorHighlight;
+    if (_addTitleColorHighlight)
+    {
+        [self.buttonAddMore setTitleColor:_addTitleColorHighlight forState:UIControlStateHighlighted];
+    }
+}
+
+#pragma mark 编辑框
 
 - (void)setTextFont:(UIFont *)textFont
 {
@@ -352,6 +465,8 @@ static NSString *const limitNumberText = @"0123456789";
 {
     return self.textField.text.integerValue;
 }
+
+#pragma mark 样式
 
 - (void)setBorderShow:(BOOL)borderShow
 {
