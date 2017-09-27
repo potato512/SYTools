@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A730097C1EAA0CE200439631 /* SYNetworkEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = A73009791EAA0CE200439631 /* SYNetworkEnvironment.m */; };
-		A730097D1EAA0CE200439631 /* SYNetworkEnvironmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A730097B1EAA0CE200439631 /* SYNetworkEnvironmentView.m */; };
 		A76379C01EA0AFE00096433D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76379BF1EA0AFE00096433D /* main.m */; };
 		A76379C31EA0AFE00096433D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A76379C21EA0AFE00096433D /* AppDelegate.m */; };
 		A76379C61EA0AFE00096433D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76379C51EA0AFE00096433D /* ViewController.m */; };
@@ -16,41 +14,43 @@
 		A76379CE1EA0AFE00096433D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76379CC1EA0AFE00096433D /* LaunchScreen.storyboard */; };
 		A76379D91EA0AFE00096433D /* DemoSYToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76379D81EA0AFE00096433D /* DemoSYToolsTests.m */; };
 		A76379E41EA0AFE00096433D /* DemoSYToolsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76379E31EA0AFE00096433D /* DemoSYToolsUITests.m */; };
-		A7637A571EA0B0890096433D /* SYCommons.md in Sources */ = {isa = PBXBuildFile; fileRef = A76379FD1EA0B0890096433D /* SYCommons.md */; };
-		A7637A581EA0B0890096433D /* SYFoundationTools.md in Sources */ = {isa = PBXBuildFile; fileRef = A76379FF1EA0B0890096433D /* SYFoundationTools.md */; };
-		A7637A591EA0B0890096433D /* SYNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A021EA0B0890096433D /* SYNotificationManager.m */; };
-		A7637A5A1EA0B0890096433D /* MD5Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A051EA0B0890096433D /* MD5Secure.m */; };
-		A7637A5B1EA0B0890096433D /* SYUserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A081EA0B0890096433D /* SYUserDefaultManager.m */; };
-		A7637A5C1EA0B0890096433D /* SYUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A0A1EA0B0890096433D /* SYUUID.m */; };
-		A7637A5D1EA0B0890096433D /* SYFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A0E1EA0B0890096433D /* SYFMDBManager.m */; };
-		A7637A5E1EA0B0890096433D /* SYNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A101EA0B0890096433D /* SYNetworkCache.m */; };
-		A7637A5F1EA0B0890096433D /* HUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A131EA0B0890096433D /* HUDManager.m */; };
-		A7637A601EA0B0890096433D /* SYLibsTools.md in Sources */ = {isa = PBXBuildFile; fileRef = A7637A141EA0B0890096433D /* SYLibsTools.md */; };
-		A7637A611EA0B0890096433D /* MJDIYRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A181EA0B0890096433D /* MJDIYRefreshFooter.m */; };
-		A7637A621EA0B0890096433D /* MJDIYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A1A1EA0B0890096433D /* MJDIYRefreshHeader.m */; };
-		A7637A631EA0B0890096433D /* SYNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A1D1EA0B0890096433D /* SYNetworkRequest.m */; };
-		A7637A641EA0B0890096433D /* SYCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A211EA0B0890096433D /* SYCollectionView.m */; };
-		A7637A651EA0B0890096433D /* SYCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A231EA0B0890096433D /* SYCountDownButton.m */; };
-		A7637A661EA0B0890096433D /* SYGuideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A261EA0B0890096433D /* SYGuideScrollView.m */; };
-		A7637A671EA0B0890096433D /* SYDeleteImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7637A281EA0B0890096433D /* SYDeleteImage@2x.png */; };
-		A7637A681EA0B0890096433D /* SYImageBrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A2A1EA0B0890096433D /* SYImageBrowse.m */; };
-		A7637A691EA0B0890096433D /* SYImageBrowseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A2C1EA0B0890096433D /* SYImageBrowseHelper.m */; };
-		A7637A6A1EA0B0890096433D /* SYImageBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A2E1EA0B0890096433D /* SYImageBrowseView.m */; };
-		A7637A6B1EA0B0890096433D /* iToast+SYToast.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A311EA0B0890096433D /* iToast+SYToast.m */; };
-		A7637A6C1EA0B0890096433D /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A331EA0B0890096433D /* iToast.m */; };
-		A7637A6F1EA0B0890096433D /* SYNetworkStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A3B1EA0B0890096433D /* SYNetworkStatusView.m */; };
-		A7637A701EA0B0890096433D /* SYWithoutNetworkView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A3D1EA0B0890096433D /* SYWithoutNetworkView.m */; };
-		A7637A711EA0B0890096433D /* SYPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A401EA0B0890096433D /* SYPopupView.m */; };
-		A7637A721EA0B0890096433D /* SYProgressWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A431EA0B0890096433D /* SYProgressWebView.m */; };
-		A7637A731EA0B0890096433D /* SYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A451EA0B0890096433D /* SYTableView.m */; };
-		A7637A741EA0B0890096433D /* SYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A471EA0B0890096433D /* SYTextField.m */; };
-		A7637A751EA0B0890096433D /* SYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A491EA0B0890096433D /* SYTextView.m */; };
-		A7637A761EA0B0890096433D /* SYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A4C1EA0B0890096433D /* SYButton.m */; };
-		A7637A771EA0B0890096433D /* SYTypeButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A4E1EA0B0890096433D /* SYTypeButtonView.m */; };
-		A7637A781EA0B0890096433D /* SYUIInitMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A521EA0B0890096433D /* SYUIInitMethod.m */; };
-		A7637A791EA0B0890096433D /* SYUITools.md in Sources */ = {isa = PBXBuildFile; fileRef = A7637A531EA0B0890096433D /* SYUITools.md */; };
-		A7637A7A1EA0B0890096433D /* SYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7637A561EA0B0890096433D /* SYWebView.m */; };
-		A78E9D6B1EAF43DF003D1949 /* SYNumberEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A78E9D6A1EAF43DF003D1949 /* SYNumberEditView.m */; };
+		A7B0C8181F7B472C003BB596 /* SYCommons.md in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7BB1F7B472C003BB596 /* SYCommons.md */; };
+		A7B0C8191F7B472C003BB596 /* SYFoundationTools.md in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7BD1F7B472C003BB596 /* SYFoundationTools.md */; };
+		A7B0C81A1F7B472C003BB596 /* SYNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7C01F7B472C003BB596 /* SYNotificationManager.m */; };
+		A7B0C81B1F7B472C003BB596 /* MD5Secure.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7C31F7B472C003BB596 /* MD5Secure.m */; };
+		A7B0C81C1F7B472C003BB596 /* SYUserDefaultManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7C61F7B472C003BB596 /* SYUserDefaultManager.m */; };
+		A7B0C81D1F7B472C003BB596 /* SYUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7C81F7B472C003BB596 /* SYUUID.m */; };
+		A7B0C81E1F7B472C003BB596 /* SYFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7CC1F7B472C003BB596 /* SYFMDBManager.m */; };
+		A7B0C81F1F7B472C003BB596 /* SYNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7CE1F7B472C003BB596 /* SYNetworkCache.m */; };
+		A7B0C8201F7B472C003BB596 /* HUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7D11F7B472C003BB596 /* HUDManager.m */; };
+		A7B0C8211F7B472C003BB596 /* SYLibsTools.md in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7D21F7B472C003BB596 /* SYLibsTools.md */; };
+		A7B0C8221F7B472C003BB596 /* MJDIYRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7D61F7B472C003BB596 /* MJDIYRefreshFooter.m */; };
+		A7B0C8231F7B472C003BB596 /* MJDIYRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7D81F7B472C003BB596 /* MJDIYRefreshHeader.m */; };
+		A7B0C8241F7B472C003BB596 /* SYNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7DB1F7B472C003BB596 /* SYNetworkRequest.m */; };
+		A7B0C8251F7B472C003BB596 /* SYCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7DF1F7B472C003BB596 /* SYCollectionView.m */; };
+		A7B0C8261F7B472C003BB596 /* SYCountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7E11F7B472C003BB596 /* SYCountDownButton.m */; };
+		A7B0C8271F7B472C003BB596 /* SYGuideScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7E41F7B472C003BB596 /* SYGuideScrollView.m */; };
+		A7B0C8281F7B472C003BB596 /* SYDeleteImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B0C7E61F7B472C003BB596 /* SYDeleteImage@2x.png */; };
+		A7B0C8291F7B472C003BB596 /* SYImageBrowse.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7E81F7B472C003BB596 /* SYImageBrowse.m */; };
+		A7B0C82A1F7B472C003BB596 /* SYImageBrowseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7EA1F7B472C003BB596 /* SYImageBrowseHelper.m */; };
+		A7B0C82B1F7B472C003BB596 /* SYImageBrowseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7EC1F7B472C003BB596 /* SYImageBrowseView.m */; };
+		A7B0C82C1F7B472C003BB596 /* iToast+SYToast.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7EF1F7B472C003BB596 /* iToast+SYToast.m */; };
+		A7B0C82D1F7B472C003BB596 /* iToast.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7F11F7B472C003BB596 /* iToast.m */; };
+		A7B0C82E1F7B472C003BB596 /* SYNetworkStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7F41F7B472C003BB596 /* SYNetworkStatusView.m */; };
+		A7B0C82F1F7B472C003BB596 /* SYWithoutNetworkView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7F61F7B472C003BB596 /* SYWithoutNetworkView.m */; };
+		A7B0C8301F7B472C003BB596 /* SYNetworkEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7F91F7B472C003BB596 /* SYNetworkEnvironment.m */; };
+		A7B0C8311F7B472C003BB596 /* SYNetworkEnvironmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7FB1F7B472C003BB596 /* SYNetworkEnvironmentView.m */; };
+		A7B0C8321F7B472C003BB596 /* SYNumberEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C7FE1F7B472C003BB596 /* SYNumberEditView.m */; };
+		A7B0C8331F7B472C003BB596 /* SYPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C8011F7B472C003BB596 /* SYPopupView.m */; };
+		A7B0C8341F7B472C003BB596 /* SYProgressWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C8041F7B472C003BB596 /* SYProgressWebView.m */; };
+		A7B0C8351F7B472C003BB596 /* SYTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C8061F7B472C003BB596 /* SYTableView.m */; };
+		A7B0C8361F7B472C003BB596 /* SYTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C8081F7B472C003BB596 /* SYTextField.m */; };
+		A7B0C8371F7B472C003BB596 /* SYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C80A1F7B472C003BB596 /* SYTextView.m */; };
+		A7B0C8381F7B472C003BB596 /* SYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C80D1F7B472C003BB596 /* SYButton.m */; };
+		A7B0C8391F7B472C003BB596 /* SYTypeButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C80F1F7B472C003BB596 /* SYTypeButtonView.m */; };
+		A7B0C83A1F7B472C003BB596 /* SYUIInitMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C8131F7B472C003BB596 /* SYUIInitMethod.m */; };
+		A7B0C83B1F7B472C003BB596 /* SYUITools.md in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C8141F7B472C003BB596 /* SYUITools.md */; };
+		A7B0C83C1F7B472C003BB596 /* SYWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B0C8171F7B472C003BB596 /* SYWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +71,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A73009781EAA0CE200439631 /* SYNetworkEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkEnvironment.h; sourceTree = "<group>"; };
-		A73009791EAA0CE200439631 /* SYNetworkEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkEnvironment.m; sourceTree = "<group>"; };
-		A730097A1EAA0CE200439631 /* SYNetworkEnvironmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkEnvironmentView.h; sourceTree = "<group>"; };
-		A730097B1EAA0CE200439631 /* SYNetworkEnvironmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkEnvironmentView.m; sourceTree = "<group>"; };
 		A76379BB1EA0AFE00096433D /* DemoSYTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoSYTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76379BF1EA0AFE00096433D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A76379C11EA0AFE00096433D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -90,87 +86,91 @@
 		A76379DF1EA0AFE00096433D /* DemoSYToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoSYToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76379E31EA0AFE00096433D /* DemoSYToolsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoSYToolsUITests.m; sourceTree = "<group>"; };
 		A76379E51EA0AFE00096433D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A76379F31EA0B0890096433D /* SYCommon_color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_color.h; sourceTree = "<group>"; };
-		A76379F41EA0B0890096433D /* SYCommon_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_define.h; sourceTree = "<group>"; };
-		A76379F51EA0B0890096433D /* SYCommon_Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_Device.h; sourceTree = "<group>"; };
-		A76379F61EA0B0890096433D /* SYCommon_FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_FilePath.h; sourceTree = "<group>"; };
-		A76379F71EA0B0890096433D /* SYCommon_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_font.h; sourceTree = "<group>"; };
-		A76379F81EA0B0890096433D /* SYCommon_Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_Image.h; sourceTree = "<group>"; };
-		A76379F91EA0B0890096433D /* SYCommon_limit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_limit.h; sourceTree = "<group>"; };
-		A76379FA1EA0B0890096433D /* SYCommon_Markwords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_Markwords.h; sourceTree = "<group>"; };
-		A76379FB1EA0B0890096433D /* SYCommon_Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_Symbol.h; sourceTree = "<group>"; };
-		A76379FC1EA0B0890096433D /* SYCommon_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_time.h; sourceTree = "<group>"; };
-		A76379FD1EA0B0890096433D /* SYCommons.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SYCommons.md; sourceTree = "<group>"; };
-		A76379FF1EA0B0890096433D /* SYFoundationTools.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SYFoundationTools.md; sourceTree = "<group>"; };
-		A7637A001EA0B0890096433D /* SYFoundationToolsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFoundationToolsHeader.h; sourceTree = "<group>"; };
-		A7637A011EA0B0890096433D /* SYNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNotificationManager.h; sourceTree = "<group>"; };
-		A7637A021EA0B0890096433D /* SYNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNotificationManager.m; sourceTree = "<group>"; };
-		A7637A041EA0B0890096433D /* MD5Secure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Secure.h; sourceTree = "<group>"; };
-		A7637A051EA0B0890096433D /* MD5Secure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Secure.m; sourceTree = "<group>"; };
-		A7637A061EA0B0890096433D /* SYSecureTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSecureTools.h; sourceTree = "<group>"; };
-		A7637A071EA0B0890096433D /* SYUserDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUserDefaultManager.h; sourceTree = "<group>"; };
-		A7637A081EA0B0890096433D /* SYUserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUserDefaultManager.m; sourceTree = "<group>"; };
-		A7637A091EA0B0890096433D /* SYUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUUID.h; sourceTree = "<group>"; };
-		A7637A0A1EA0B0890096433D /* SYUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUUID.m; sourceTree = "<group>"; };
-		A7637A0D1EA0B0890096433D /* SYFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFMDBManager.h; sourceTree = "<group>"; };
-		A7637A0E1EA0B0890096433D /* SYFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFMDBManager.m; sourceTree = "<group>"; };
-		A7637A0F1EA0B0890096433D /* SYNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkCache.h; sourceTree = "<group>"; };
-		A7637A101EA0B0890096433D /* SYNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkCache.m; sourceTree = "<group>"; };
-		A7637A121EA0B0890096433D /* HUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDManager.h; sourceTree = "<group>"; };
-		A7637A131EA0B0890096433D /* HUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDManager.m; sourceTree = "<group>"; };
-		A7637A141EA0B0890096433D /* SYLibsTools.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SYLibsTools.md; sourceTree = "<group>"; };
-		A7637A151EA0B0890096433D /* SYLibsToolsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLibsToolsHeader.h; sourceTree = "<group>"; };
-		A7637A171EA0B0890096433D /* MJDIYRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDIYRefreshFooter.h; sourceTree = "<group>"; };
-		A7637A181EA0B0890096433D /* MJDIYRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDIYRefreshFooter.m; sourceTree = "<group>"; };
-		A7637A191EA0B0890096433D /* MJDIYRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDIYRefreshHeader.h; sourceTree = "<group>"; };
-		A7637A1A1EA0B0890096433D /* MJDIYRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDIYRefreshHeader.m; sourceTree = "<group>"; };
-		A7637A1C1EA0B0890096433D /* SYNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkRequest.h; sourceTree = "<group>"; };
-		A7637A1D1EA0B0890096433D /* SYNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkRequest.m; sourceTree = "<group>"; };
-		A7637A1E1EA0B0890096433D /* SYToolsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYToolsHeader.h; sourceTree = "<group>"; };
-		A7637A201EA0B0890096433D /* SYCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCollectionView.h; sourceTree = "<group>"; };
-		A7637A211EA0B0890096433D /* SYCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCollectionView.m; sourceTree = "<group>"; };
-		A7637A221EA0B0890096433D /* SYCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCountDownButton.h; sourceTree = "<group>"; };
-		A7637A231EA0B0890096433D /* SYCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCountDownButton.m; sourceTree = "<group>"; };
-		A7637A251EA0B0890096433D /* SYGuideScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGuideScrollView.h; sourceTree = "<group>"; };
-		A7637A261EA0B0890096433D /* SYGuideScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGuideScrollView.m; sourceTree = "<group>"; };
-		A7637A281EA0B0890096433D /* SYDeleteImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SYDeleteImage@2x.png"; sourceTree = "<group>"; };
-		A7637A291EA0B0890096433D /* SYImageBrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYImageBrowse.h; sourceTree = "<group>"; };
-		A7637A2A1EA0B0890096433D /* SYImageBrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYImageBrowse.m; sourceTree = "<group>"; };
-		A7637A2B1EA0B0890096433D /* SYImageBrowseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYImageBrowseHelper.h; sourceTree = "<group>"; };
-		A7637A2C1EA0B0890096433D /* SYImageBrowseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYImageBrowseHelper.m; sourceTree = "<group>"; };
-		A7637A2D1EA0B0890096433D /* SYImageBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYImageBrowseView.h; sourceTree = "<group>"; };
-		A7637A2E1EA0B0890096433D /* SYImageBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYImageBrowseView.m; sourceTree = "<group>"; };
-		A7637A301EA0B0890096433D /* iToast+SYToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iToast+SYToast.h"; sourceTree = "<group>"; };
-		A7637A311EA0B0890096433D /* iToast+SYToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "iToast+SYToast.m"; sourceTree = "<group>"; };
-		A7637A321EA0B0890096433D /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
-		A7637A331EA0B0890096433D /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
-		A7637A3A1EA0B0890096433D /* SYNetworkStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkStatusView.h; sourceTree = "<group>"; };
-		A7637A3B1EA0B0890096433D /* SYNetworkStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkStatusView.m; sourceTree = "<group>"; };
-		A7637A3C1EA0B0890096433D /* SYWithoutNetworkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWithoutNetworkView.h; sourceTree = "<group>"; };
-		A7637A3D1EA0B0890096433D /* SYWithoutNetworkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWithoutNetworkView.m; sourceTree = "<group>"; };
-		A7637A3F1EA0B0890096433D /* SYPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPopupView.h; sourceTree = "<group>"; };
-		A7637A401EA0B0890096433D /* SYPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPopupView.m; sourceTree = "<group>"; };
-		A7637A421EA0B0890096433D /* SYProgressWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYProgressWebView.h; sourceTree = "<group>"; };
-		A7637A431EA0B0890096433D /* SYProgressWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYProgressWebView.m; sourceTree = "<group>"; };
-		A7637A441EA0B0890096433D /* SYTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTableView.h; sourceTree = "<group>"; };
-		A7637A451EA0B0890096433D /* SYTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTableView.m; sourceTree = "<group>"; };
-		A7637A461EA0B0890096433D /* SYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTextField.h; sourceTree = "<group>"; };
-		A7637A471EA0B0890096433D /* SYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTextField.m; sourceTree = "<group>"; };
-		A7637A481EA0B0890096433D /* SYTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTextView.h; sourceTree = "<group>"; };
-		A7637A491EA0B0890096433D /* SYTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTextView.m; sourceTree = "<group>"; };
-		A7637A4B1EA0B0890096433D /* SYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYButton.h; sourceTree = "<group>"; };
-		A7637A4C1EA0B0890096433D /* SYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYButton.m; sourceTree = "<group>"; };
-		A7637A4D1EA0B0890096433D /* SYTypeButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTypeButtonView.h; sourceTree = "<group>"; };
-		A7637A4E1EA0B0890096433D /* SYTypeButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTypeButtonView.m; sourceTree = "<group>"; };
-		A7637A501EA0B0890096433D /* SYAutoSizeCGRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAutoSizeCGRect.h; sourceTree = "<group>"; };
-		A7637A511EA0B0890096433D /* SYUIInitMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUIInitMethod.h; sourceTree = "<group>"; };
-		A7637A521EA0B0890096433D /* SYUIInitMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUIInitMethod.m; sourceTree = "<group>"; };
-		A7637A531EA0B0890096433D /* SYUITools.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SYUITools.md; sourceTree = "<group>"; };
-		A7637A541EA0B0890096433D /* SYUIToolsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUIToolsHeader.h; sourceTree = "<group>"; };
-		A7637A551EA0B0890096433D /* SYWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWebView.h; sourceTree = "<group>"; };
-		A7637A561EA0B0890096433D /* SYWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWebView.m; sourceTree = "<group>"; };
-		A78E9D691EAF43DF003D1949 /* SYNumberEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNumberEditView.h; sourceTree = "<group>"; };
-		A78E9D6A1EAF43DF003D1949 /* SYNumberEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNumberEditView.m; sourceTree = "<group>"; };
+		A7B0C7B11F7B472C003BB596 /* SYCommon_color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_color.h; sourceTree = "<group>"; };
+		A7B0C7B21F7B472C003BB596 /* SYCommon_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_define.h; sourceTree = "<group>"; };
+		A7B0C7B31F7B472C003BB596 /* SYCommon_Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_Device.h; sourceTree = "<group>"; };
+		A7B0C7B41F7B472C003BB596 /* SYCommon_FilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_FilePath.h; sourceTree = "<group>"; };
+		A7B0C7B51F7B472C003BB596 /* SYCommon_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_font.h; sourceTree = "<group>"; };
+		A7B0C7B61F7B472C003BB596 /* SYCommon_Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_Image.h; sourceTree = "<group>"; };
+		A7B0C7B71F7B472C003BB596 /* SYCommon_limit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_limit.h; sourceTree = "<group>"; };
+		A7B0C7B81F7B472C003BB596 /* SYCommon_Markwords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_Markwords.h; sourceTree = "<group>"; };
+		A7B0C7B91F7B472C003BB596 /* SYCommon_Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_Symbol.h; sourceTree = "<group>"; };
+		A7B0C7BA1F7B472C003BB596 /* SYCommon_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCommon_time.h; sourceTree = "<group>"; };
+		A7B0C7BB1F7B472C003BB596 /* SYCommons.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SYCommons.md; sourceTree = "<group>"; };
+		A7B0C7BD1F7B472C003BB596 /* SYFoundationTools.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SYFoundationTools.md; sourceTree = "<group>"; };
+		A7B0C7BE1F7B472C003BB596 /* SYFoundationToolsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFoundationToolsHeader.h; sourceTree = "<group>"; };
+		A7B0C7BF1F7B472C003BB596 /* SYNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNotificationManager.h; sourceTree = "<group>"; };
+		A7B0C7C01F7B472C003BB596 /* SYNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNotificationManager.m; sourceTree = "<group>"; };
+		A7B0C7C21F7B472C003BB596 /* MD5Secure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5Secure.h; sourceTree = "<group>"; };
+		A7B0C7C31F7B472C003BB596 /* MD5Secure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MD5Secure.m; sourceTree = "<group>"; };
+		A7B0C7C41F7B472C003BB596 /* SYSecureTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSecureTools.h; sourceTree = "<group>"; };
+		A7B0C7C51F7B472C003BB596 /* SYUserDefaultManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUserDefaultManager.h; sourceTree = "<group>"; };
+		A7B0C7C61F7B472C003BB596 /* SYUserDefaultManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUserDefaultManager.m; sourceTree = "<group>"; };
+		A7B0C7C71F7B472C003BB596 /* SYUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUUID.h; sourceTree = "<group>"; };
+		A7B0C7C81F7B472C003BB596 /* SYUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUUID.m; sourceTree = "<group>"; };
+		A7B0C7CB1F7B472C003BB596 /* SYFMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYFMDBManager.h; sourceTree = "<group>"; };
+		A7B0C7CC1F7B472C003BB596 /* SYFMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYFMDBManager.m; sourceTree = "<group>"; };
+		A7B0C7CD1F7B472C003BB596 /* SYNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkCache.h; sourceTree = "<group>"; };
+		A7B0C7CE1F7B472C003BB596 /* SYNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkCache.m; sourceTree = "<group>"; };
+		A7B0C7D01F7B472C003BB596 /* HUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDManager.h; sourceTree = "<group>"; };
+		A7B0C7D11F7B472C003BB596 /* HUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDManager.m; sourceTree = "<group>"; };
+		A7B0C7D21F7B472C003BB596 /* SYLibsTools.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SYLibsTools.md; sourceTree = "<group>"; };
+		A7B0C7D31F7B472C003BB596 /* SYLibsToolsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYLibsToolsHeader.h; sourceTree = "<group>"; };
+		A7B0C7D51F7B472C003BB596 /* MJDIYRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDIYRefreshFooter.h; sourceTree = "<group>"; };
+		A7B0C7D61F7B472C003BB596 /* MJDIYRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDIYRefreshFooter.m; sourceTree = "<group>"; };
+		A7B0C7D71F7B472C003BB596 /* MJDIYRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDIYRefreshHeader.h; sourceTree = "<group>"; };
+		A7B0C7D81F7B472C003BB596 /* MJDIYRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDIYRefreshHeader.m; sourceTree = "<group>"; };
+		A7B0C7DA1F7B472C003BB596 /* SYNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkRequest.h; sourceTree = "<group>"; };
+		A7B0C7DB1F7B472C003BB596 /* SYNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkRequest.m; sourceTree = "<group>"; };
+		A7B0C7DC1F7B472C003BB596 /* SYToolsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYToolsHeader.h; sourceTree = "<group>"; };
+		A7B0C7DE1F7B472C003BB596 /* SYCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCollectionView.h; sourceTree = "<group>"; };
+		A7B0C7DF1F7B472C003BB596 /* SYCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCollectionView.m; sourceTree = "<group>"; };
+		A7B0C7E01F7B472C003BB596 /* SYCountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYCountDownButton.h; sourceTree = "<group>"; };
+		A7B0C7E11F7B472C003BB596 /* SYCountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYCountDownButton.m; sourceTree = "<group>"; };
+		A7B0C7E31F7B472C003BB596 /* SYGuideScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYGuideScrollView.h; sourceTree = "<group>"; };
+		A7B0C7E41F7B472C003BB596 /* SYGuideScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYGuideScrollView.m; sourceTree = "<group>"; };
+		A7B0C7E61F7B472C003BB596 /* SYDeleteImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SYDeleteImage@2x.png"; sourceTree = "<group>"; };
+		A7B0C7E71F7B472C003BB596 /* SYImageBrowse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYImageBrowse.h; sourceTree = "<group>"; };
+		A7B0C7E81F7B472C003BB596 /* SYImageBrowse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYImageBrowse.m; sourceTree = "<group>"; };
+		A7B0C7E91F7B472C003BB596 /* SYImageBrowseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYImageBrowseHelper.h; sourceTree = "<group>"; };
+		A7B0C7EA1F7B472C003BB596 /* SYImageBrowseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYImageBrowseHelper.m; sourceTree = "<group>"; };
+		A7B0C7EB1F7B472C003BB596 /* SYImageBrowseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYImageBrowseView.h; sourceTree = "<group>"; };
+		A7B0C7EC1F7B472C003BB596 /* SYImageBrowseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYImageBrowseView.m; sourceTree = "<group>"; };
+		A7B0C7EE1F7B472C003BB596 /* iToast+SYToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iToast+SYToast.h"; sourceTree = "<group>"; };
+		A7B0C7EF1F7B472C003BB596 /* iToast+SYToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "iToast+SYToast.m"; sourceTree = "<group>"; };
+		A7B0C7F01F7B472C003BB596 /* iToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iToast.h; sourceTree = "<group>"; };
+		A7B0C7F11F7B472C003BB596 /* iToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iToast.m; sourceTree = "<group>"; };
+		A7B0C7F31F7B472C003BB596 /* SYNetworkStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkStatusView.h; sourceTree = "<group>"; };
+		A7B0C7F41F7B472C003BB596 /* SYNetworkStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkStatusView.m; sourceTree = "<group>"; };
+		A7B0C7F51F7B472C003BB596 /* SYWithoutNetworkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWithoutNetworkView.h; sourceTree = "<group>"; };
+		A7B0C7F61F7B472C003BB596 /* SYWithoutNetworkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWithoutNetworkView.m; sourceTree = "<group>"; };
+		A7B0C7F81F7B472C003BB596 /* SYNetworkEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkEnvironment.h; sourceTree = "<group>"; };
+		A7B0C7F91F7B472C003BB596 /* SYNetworkEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkEnvironment.m; sourceTree = "<group>"; };
+		A7B0C7FA1F7B472C003BB596 /* SYNetworkEnvironmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNetworkEnvironmentView.h; sourceTree = "<group>"; };
+		A7B0C7FB1F7B472C003BB596 /* SYNetworkEnvironmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNetworkEnvironmentView.m; sourceTree = "<group>"; };
+		A7B0C7FD1F7B472C003BB596 /* SYNumberEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYNumberEditView.h; sourceTree = "<group>"; };
+		A7B0C7FE1F7B472C003BB596 /* SYNumberEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYNumberEditView.m; sourceTree = "<group>"; };
+		A7B0C8001F7B472C003BB596 /* SYPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYPopupView.h; sourceTree = "<group>"; };
+		A7B0C8011F7B472C003BB596 /* SYPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYPopupView.m; sourceTree = "<group>"; };
+		A7B0C8031F7B472C003BB596 /* SYProgressWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYProgressWebView.h; sourceTree = "<group>"; };
+		A7B0C8041F7B472C003BB596 /* SYProgressWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYProgressWebView.m; sourceTree = "<group>"; };
+		A7B0C8051F7B472C003BB596 /* SYTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTableView.h; sourceTree = "<group>"; };
+		A7B0C8061F7B472C003BB596 /* SYTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTableView.m; sourceTree = "<group>"; };
+		A7B0C8071F7B472C003BB596 /* SYTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTextField.h; sourceTree = "<group>"; };
+		A7B0C8081F7B472C003BB596 /* SYTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTextField.m; sourceTree = "<group>"; };
+		A7B0C8091F7B472C003BB596 /* SYTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTextView.h; sourceTree = "<group>"; };
+		A7B0C80A1F7B472C003BB596 /* SYTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTextView.m; sourceTree = "<group>"; };
+		A7B0C80C1F7B472C003BB596 /* SYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYButton.h; sourceTree = "<group>"; };
+		A7B0C80D1F7B472C003BB596 /* SYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYButton.m; sourceTree = "<group>"; };
+		A7B0C80E1F7B472C003BB596 /* SYTypeButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYTypeButtonView.h; sourceTree = "<group>"; };
+		A7B0C80F1F7B472C003BB596 /* SYTypeButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYTypeButtonView.m; sourceTree = "<group>"; };
+		A7B0C8111F7B472C003BB596 /* SYAutoSizeCGRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYAutoSizeCGRect.h; sourceTree = "<group>"; };
+		A7B0C8121F7B472C003BB596 /* SYUIInitMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUIInitMethod.h; sourceTree = "<group>"; };
+		A7B0C8131F7B472C003BB596 /* SYUIInitMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYUIInitMethod.m; sourceTree = "<group>"; };
+		A7B0C8141F7B472C003BB596 /* SYUITools.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SYUITools.md; sourceTree = "<group>"; };
+		A7B0C8151F7B472C003BB596 /* SYUIToolsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYUIToolsHeader.h; sourceTree = "<group>"; };
+		A7B0C8161F7B472C003BB596 /* SYWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYWebView.h; sourceTree = "<group>"; };
+		A7B0C8171F7B472C003BB596 /* SYWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,17 +198,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A73009771EAA0CE200439631 /* SYNetwrokEnvironment */ = {
-			isa = PBXGroup;
-			children = (
-				A73009781EAA0CE200439631 /* SYNetworkEnvironment.h */,
-				A73009791EAA0CE200439631 /* SYNetworkEnvironment.m */,
-				A730097A1EAA0CE200439631 /* SYNetworkEnvironmentView.h */,
-				A730097B1EAA0CE200439631 /* SYNetworkEnvironmentView.m */,
-			);
-			path = SYNetwrokEnvironment;
-			sourceTree = "<group>";
-		};
 		A76379B21EA0AFE00096433D = {
 			isa = PBXGroup;
 			children = (
@@ -236,10 +225,7 @@
 				A76379C21EA0AFE00096433D /* AppDelegate.m */,
 				A76379C41EA0AFE00096433D /* ViewController.h */,
 				A76379C51EA0AFE00096433D /* ViewController.m */,
-				A76379F11EA0B0890096433D /* SYTools */,
-				A76379CA1EA0AFE00096433D /* Assets.xcassets */,
-				A76379CC1EA0AFE00096433D /* LaunchScreen.storyboard */,
-				A76379CF1EA0AFE00096433D /* Info.plist */,
+				A7B0C7AF1F7B472C003BB596 /* SYTools */,
 				A76379BE1EA0AFE00096433D /* Supporting Files */,
 			);
 			path = DemoSYTools;
@@ -248,6 +234,9 @@
 		A76379BE1EA0AFE00096433D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A76379CA1EA0AFE00096433D /* Assets.xcassets */,
+				A76379CC1EA0AFE00096433D /* LaunchScreen.storyboard */,
+				A76379CF1EA0AFE00096433D /* Info.plist */,
 				A76379BF1EA0AFE00096433D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -271,237 +260,249 @@
 			path = DemoSYToolsUITests;
 			sourceTree = "<group>";
 		};
-		A76379F11EA0B0890096433D /* SYTools */ = {
+		A7B0C7AF1F7B472C003BB596 /* SYTools */ = {
 			isa = PBXGroup;
 			children = (
-				A76379F21EA0B0890096433D /* SYCommons */,
-				A76379FE1EA0B0890096433D /* SYFoundationTools */,
-				A7637A0B1EA0B0890096433D /* SYLibsTools */,
-				A7637A1E1EA0B0890096433D /* SYToolsHeader.h */,
-				A7637A1F1EA0B0890096433D /* SYUITools */,
+				A7B0C7B01F7B472C003BB596 /* SYCommons */,
+				A7B0C7BC1F7B472C003BB596 /* SYFoundationTools */,
+				A7B0C7C91F7B472C003BB596 /* SYLibsTools */,
+				A7B0C7DC1F7B472C003BB596 /* SYToolsHeader.h */,
+				A7B0C7DD1F7B472C003BB596 /* SYUITools */,
 			);
-			path = SYTools;
+			name = SYTools;
+			path = ../../SYTools;
 			sourceTree = "<group>";
 		};
-		A76379F21EA0B0890096433D /* SYCommons */ = {
+		A7B0C7B01F7B472C003BB596 /* SYCommons */ = {
 			isa = PBXGroup;
 			children = (
-				A76379F31EA0B0890096433D /* SYCommon_color.h */,
-				A76379F41EA0B0890096433D /* SYCommon_define.h */,
-				A76379F51EA0B0890096433D /* SYCommon_Device.h */,
-				A76379F61EA0B0890096433D /* SYCommon_FilePath.h */,
-				A76379F71EA0B0890096433D /* SYCommon_font.h */,
-				A76379F81EA0B0890096433D /* SYCommon_Image.h */,
-				A76379F91EA0B0890096433D /* SYCommon_limit.h */,
-				A76379FA1EA0B0890096433D /* SYCommon_Markwords.h */,
-				A76379FB1EA0B0890096433D /* SYCommon_Symbol.h */,
-				A76379FC1EA0B0890096433D /* SYCommon_time.h */,
-				A76379FD1EA0B0890096433D /* SYCommons.md */,
+				A7B0C7B11F7B472C003BB596 /* SYCommon_color.h */,
+				A7B0C7B21F7B472C003BB596 /* SYCommon_define.h */,
+				A7B0C7B31F7B472C003BB596 /* SYCommon_Device.h */,
+				A7B0C7B41F7B472C003BB596 /* SYCommon_FilePath.h */,
+				A7B0C7B51F7B472C003BB596 /* SYCommon_font.h */,
+				A7B0C7B61F7B472C003BB596 /* SYCommon_Image.h */,
+				A7B0C7B71F7B472C003BB596 /* SYCommon_limit.h */,
+				A7B0C7B81F7B472C003BB596 /* SYCommon_Markwords.h */,
+				A7B0C7B91F7B472C003BB596 /* SYCommon_Symbol.h */,
+				A7B0C7BA1F7B472C003BB596 /* SYCommon_time.h */,
+				A7B0C7BB1F7B472C003BB596 /* SYCommons.md */,
 			);
 			path = SYCommons;
 			sourceTree = "<group>";
 		};
-		A76379FE1EA0B0890096433D /* SYFoundationTools */ = {
+		A7B0C7BC1F7B472C003BB596 /* SYFoundationTools */ = {
 			isa = PBXGroup;
 			children = (
-				A76379FF1EA0B0890096433D /* SYFoundationTools.md */,
-				A7637A001EA0B0890096433D /* SYFoundationToolsHeader.h */,
-				A7637A011EA0B0890096433D /* SYNotificationManager.h */,
-				A7637A021EA0B0890096433D /* SYNotificationManager.m */,
-				A7637A031EA0B0890096433D /* SYSecure */,
-				A7637A071EA0B0890096433D /* SYUserDefaultManager.h */,
-				A7637A081EA0B0890096433D /* SYUserDefaultManager.m */,
-				A7637A091EA0B0890096433D /* SYUUID.h */,
-				A7637A0A1EA0B0890096433D /* SYUUID.m */,
+				A7B0C7BD1F7B472C003BB596 /* SYFoundationTools.md */,
+				A7B0C7BE1F7B472C003BB596 /* SYFoundationToolsHeader.h */,
+				A7B0C7BF1F7B472C003BB596 /* SYNotificationManager.h */,
+				A7B0C7C01F7B472C003BB596 /* SYNotificationManager.m */,
+				A7B0C7C11F7B472C003BB596 /* SYSecure */,
+				A7B0C7C51F7B472C003BB596 /* SYUserDefaultManager.h */,
+				A7B0C7C61F7B472C003BB596 /* SYUserDefaultManager.m */,
+				A7B0C7C71F7B472C003BB596 /* SYUUID.h */,
+				A7B0C7C81F7B472C003BB596 /* SYUUID.m */,
 			);
 			path = SYFoundationTools;
 			sourceTree = "<group>";
 		};
-		A7637A031EA0B0890096433D /* SYSecure */ = {
+		A7B0C7C11F7B472C003BB596 /* SYSecure */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A041EA0B0890096433D /* MD5Secure.h */,
-				A7637A051EA0B0890096433D /* MD5Secure.m */,
-				A7637A061EA0B0890096433D /* SYSecureTools.h */,
+				A7B0C7C21F7B472C003BB596 /* MD5Secure.h */,
+				A7B0C7C31F7B472C003BB596 /* MD5Secure.m */,
+				A7B0C7C41F7B472C003BB596 /* SYSecureTools.h */,
 			);
 			path = SYSecure;
 			sourceTree = "<group>";
 		};
-		A7637A0B1EA0B0890096433D /* SYLibsTools */ = {
+		A7B0C7C91F7B472C003BB596 /* SYLibsTools */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A0C1EA0B0890096433D /* SYCacheManager */,
-				A7637A111EA0B0890096433D /* SYHUDManager */,
-				A7637A141EA0B0890096433D /* SYLibsTools.md */,
-				A7637A151EA0B0890096433D /* SYLibsToolsHeader.h */,
-				A7637A161EA0B0890096433D /* SYMJHeaderRefresh */,
-				A7637A1B1EA0B0890096433D /* SYNetworkRequest */,
+				A7B0C7CA1F7B472C003BB596 /* SYCacheManager */,
+				A7B0C7CF1F7B472C003BB596 /* SYHUDManager */,
+				A7B0C7D21F7B472C003BB596 /* SYLibsTools.md */,
+				A7B0C7D31F7B472C003BB596 /* SYLibsToolsHeader.h */,
+				A7B0C7D41F7B472C003BB596 /* SYMJHeaderRefresh */,
+				A7B0C7D91F7B472C003BB596 /* SYNetworkRequest */,
 			);
 			path = SYLibsTools;
 			sourceTree = "<group>";
 		};
-		A7637A0C1EA0B0890096433D /* SYCacheManager */ = {
+		A7B0C7CA1F7B472C003BB596 /* SYCacheManager */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A0D1EA0B0890096433D /* SYFMDBManager.h */,
-				A7637A0E1EA0B0890096433D /* SYFMDBManager.m */,
-				A7637A0F1EA0B0890096433D /* SYNetworkCache.h */,
-				A7637A101EA0B0890096433D /* SYNetworkCache.m */,
+				A7B0C7CB1F7B472C003BB596 /* SYFMDBManager.h */,
+				A7B0C7CC1F7B472C003BB596 /* SYFMDBManager.m */,
+				A7B0C7CD1F7B472C003BB596 /* SYNetworkCache.h */,
+				A7B0C7CE1F7B472C003BB596 /* SYNetworkCache.m */,
 			);
 			path = SYCacheManager;
 			sourceTree = "<group>";
 		};
-		A7637A111EA0B0890096433D /* SYHUDManager */ = {
+		A7B0C7CF1F7B472C003BB596 /* SYHUDManager */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A121EA0B0890096433D /* HUDManager.h */,
-				A7637A131EA0B0890096433D /* HUDManager.m */,
+				A7B0C7D01F7B472C003BB596 /* HUDManager.h */,
+				A7B0C7D11F7B472C003BB596 /* HUDManager.m */,
 			);
 			path = SYHUDManager;
 			sourceTree = "<group>";
 		};
-		A7637A161EA0B0890096433D /* SYMJHeaderRefresh */ = {
+		A7B0C7D41F7B472C003BB596 /* SYMJHeaderRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A171EA0B0890096433D /* MJDIYRefreshFooter.h */,
-				A7637A181EA0B0890096433D /* MJDIYRefreshFooter.m */,
-				A7637A191EA0B0890096433D /* MJDIYRefreshHeader.h */,
-				A7637A1A1EA0B0890096433D /* MJDIYRefreshHeader.m */,
+				A7B0C7D51F7B472C003BB596 /* MJDIYRefreshFooter.h */,
+				A7B0C7D61F7B472C003BB596 /* MJDIYRefreshFooter.m */,
+				A7B0C7D71F7B472C003BB596 /* MJDIYRefreshHeader.h */,
+				A7B0C7D81F7B472C003BB596 /* MJDIYRefreshHeader.m */,
 			);
 			path = SYMJHeaderRefresh;
 			sourceTree = "<group>";
 		};
-		A7637A1B1EA0B0890096433D /* SYNetworkRequest */ = {
+		A7B0C7D91F7B472C003BB596 /* SYNetworkRequest */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A1C1EA0B0890096433D /* SYNetworkRequest.h */,
-				A7637A1D1EA0B0890096433D /* SYNetworkRequest.m */,
+				A7B0C7DA1F7B472C003BB596 /* SYNetworkRequest.h */,
+				A7B0C7DB1F7B472C003BB596 /* SYNetworkRequest.m */,
 			);
 			path = SYNetworkRequest;
 			sourceTree = "<group>";
 		};
-		A7637A1F1EA0B0890096433D /* SYUITools */ = {
+		A7B0C7DD1F7B472C003BB596 /* SYUITools */ = {
 			isa = PBXGroup;
 			children = (
-				A78E9D681EAF43DF003D1949 /* SYNumberEditView */,
-				A7637A201EA0B0890096433D /* SYCollectionView.h */,
-				A7637A211EA0B0890096433D /* SYCollectionView.m */,
-				A7637A221EA0B0890096433D /* SYCountDownButton.h */,
-				A7637A231EA0B0890096433D /* SYCountDownButton.m */,
-				A73009771EAA0CE200439631 /* SYNetwrokEnvironment */,
-				A7637A241EA0B0890096433D /* SYGuideView */,
-				A7637A271EA0B0890096433D /* SYImageBrowse */,
-				A7637A2F1EA0B0890096433D /* SYIToast */,
-				A7637A391EA0B0890096433D /* SYNetworkStatusView */,
-				A7637A3E1EA0B0890096433D /* SYPopupTableView */,
-				A7637A411EA0B0890096433D /* SYProgressWebView */,
-				A7637A441EA0B0890096433D /* SYTableView.h */,
-				A7637A451EA0B0890096433D /* SYTableView.m */,
-				A7637A461EA0B0890096433D /* SYTextField.h */,
-				A7637A471EA0B0890096433D /* SYTextField.m */,
-				A7637A481EA0B0890096433D /* SYTextView.h */,
-				A7637A491EA0B0890096433D /* SYTextView.m */,
-				A7637A4A1EA0B0890096433D /* SYTypeButton */,
-				A7637A4F1EA0B0890096433D /* SYUIInit */,
-				A7637A531EA0B0890096433D /* SYUITools.md */,
-				A7637A541EA0B0890096433D /* SYUIToolsHeader.h */,
-				A7637A551EA0B0890096433D /* SYWebView.h */,
-				A7637A561EA0B0890096433D /* SYWebView.m */,
+				A7B0C7DE1F7B472C003BB596 /* SYCollectionView.h */,
+				A7B0C7DF1F7B472C003BB596 /* SYCollectionView.m */,
+				A7B0C7E01F7B472C003BB596 /* SYCountDownButton.h */,
+				A7B0C7E11F7B472C003BB596 /* SYCountDownButton.m */,
+				A7B0C7E21F7B472C003BB596 /* SYGuideView */,
+				A7B0C7E51F7B472C003BB596 /* SYImageBrowse */,
+				A7B0C7ED1F7B472C003BB596 /* SYIToast */,
+				A7B0C7F21F7B472C003BB596 /* SYNetworkStatusView */,
+				A7B0C7F71F7B472C003BB596 /* SYNetwrokEnvironment */,
+				A7B0C7FC1F7B472C003BB596 /* SYNumberEditView */,
+				A7B0C7FF1F7B472C003BB596 /* SYPopupTableView */,
+				A7B0C8021F7B472C003BB596 /* SYProgressWebView */,
+				A7B0C8051F7B472C003BB596 /* SYTableView.h */,
+				A7B0C8061F7B472C003BB596 /* SYTableView.m */,
+				A7B0C8071F7B472C003BB596 /* SYTextField.h */,
+				A7B0C8081F7B472C003BB596 /* SYTextField.m */,
+				A7B0C8091F7B472C003BB596 /* SYTextView.h */,
+				A7B0C80A1F7B472C003BB596 /* SYTextView.m */,
+				A7B0C80B1F7B472C003BB596 /* SYTypeButton */,
+				A7B0C8101F7B472C003BB596 /* SYUIInit */,
+				A7B0C8141F7B472C003BB596 /* SYUITools.md */,
+				A7B0C8151F7B472C003BB596 /* SYUIToolsHeader.h */,
+				A7B0C8161F7B472C003BB596 /* SYWebView.h */,
+				A7B0C8171F7B472C003BB596 /* SYWebView.m */,
 			);
 			path = SYUITools;
 			sourceTree = "<group>";
 		};
-		A7637A241EA0B0890096433D /* SYGuideView */ = {
+		A7B0C7E21F7B472C003BB596 /* SYGuideView */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A251EA0B0890096433D /* SYGuideScrollView.h */,
-				A7637A261EA0B0890096433D /* SYGuideScrollView.m */,
+				A7B0C7E31F7B472C003BB596 /* SYGuideScrollView.h */,
+				A7B0C7E41F7B472C003BB596 /* SYGuideScrollView.m */,
 			);
 			path = SYGuideView;
 			sourceTree = "<group>";
 		};
-		A7637A271EA0B0890096433D /* SYImageBrowse */ = {
+		A7B0C7E51F7B472C003BB596 /* SYImageBrowse */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A281EA0B0890096433D /* SYDeleteImage@2x.png */,
-				A7637A291EA0B0890096433D /* SYImageBrowse.h */,
-				A7637A2A1EA0B0890096433D /* SYImageBrowse.m */,
-				A7637A2B1EA0B0890096433D /* SYImageBrowseHelper.h */,
-				A7637A2C1EA0B0890096433D /* SYImageBrowseHelper.m */,
-				A7637A2D1EA0B0890096433D /* SYImageBrowseView.h */,
-				A7637A2E1EA0B0890096433D /* SYImageBrowseView.m */,
+				A7B0C7E61F7B472C003BB596 /* SYDeleteImage@2x.png */,
+				A7B0C7E71F7B472C003BB596 /* SYImageBrowse.h */,
+				A7B0C7E81F7B472C003BB596 /* SYImageBrowse.m */,
+				A7B0C7E91F7B472C003BB596 /* SYImageBrowseHelper.h */,
+				A7B0C7EA1F7B472C003BB596 /* SYImageBrowseHelper.m */,
+				A7B0C7EB1F7B472C003BB596 /* SYImageBrowseView.h */,
+				A7B0C7EC1F7B472C003BB596 /* SYImageBrowseView.m */,
 			);
 			path = SYImageBrowse;
 			sourceTree = "<group>";
 		};
-		A7637A2F1EA0B0890096433D /* SYIToast */ = {
+		A7B0C7ED1F7B472C003BB596 /* SYIToast */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A301EA0B0890096433D /* iToast+SYToast.h */,
-				A7637A311EA0B0890096433D /* iToast+SYToast.m */,
-				A7637A321EA0B0890096433D /* iToast.h */,
-				A7637A331EA0B0890096433D /* iToast.m */,
+				A7B0C7EE1F7B472C003BB596 /* iToast+SYToast.h */,
+				A7B0C7EF1F7B472C003BB596 /* iToast+SYToast.m */,
+				A7B0C7F01F7B472C003BB596 /* iToast.h */,
+				A7B0C7F11F7B472C003BB596 /* iToast.m */,
 			);
 			path = SYIToast;
 			sourceTree = "<group>";
 		};
-		A7637A391EA0B0890096433D /* SYNetworkStatusView */ = {
+		A7B0C7F21F7B472C003BB596 /* SYNetworkStatusView */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A3A1EA0B0890096433D /* SYNetworkStatusView.h */,
-				A7637A3B1EA0B0890096433D /* SYNetworkStatusView.m */,
-				A7637A3C1EA0B0890096433D /* SYWithoutNetworkView.h */,
-				A7637A3D1EA0B0890096433D /* SYWithoutNetworkView.m */,
+				A7B0C7F31F7B472C003BB596 /* SYNetworkStatusView.h */,
+				A7B0C7F41F7B472C003BB596 /* SYNetworkStatusView.m */,
+				A7B0C7F51F7B472C003BB596 /* SYWithoutNetworkView.h */,
+				A7B0C7F61F7B472C003BB596 /* SYWithoutNetworkView.m */,
 			);
 			path = SYNetworkStatusView;
 			sourceTree = "<group>";
 		};
-		A7637A3E1EA0B0890096433D /* SYPopupTableView */ = {
+		A7B0C7F71F7B472C003BB596 /* SYNetwrokEnvironment */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A3F1EA0B0890096433D /* SYPopupView.h */,
-				A7637A401EA0B0890096433D /* SYPopupView.m */,
+				A7B0C7F81F7B472C003BB596 /* SYNetworkEnvironment.h */,
+				A7B0C7F91F7B472C003BB596 /* SYNetworkEnvironment.m */,
+				A7B0C7FA1F7B472C003BB596 /* SYNetworkEnvironmentView.h */,
+				A7B0C7FB1F7B472C003BB596 /* SYNetworkEnvironmentView.m */,
+			);
+			path = SYNetwrokEnvironment;
+			sourceTree = "<group>";
+		};
+		A7B0C7FC1F7B472C003BB596 /* SYNumberEditView */ = {
+			isa = PBXGroup;
+			children = (
+				A7B0C7FD1F7B472C003BB596 /* SYNumberEditView.h */,
+				A7B0C7FE1F7B472C003BB596 /* SYNumberEditView.m */,
+			);
+			path = SYNumberEditView;
+			sourceTree = "<group>";
+		};
+		A7B0C7FF1F7B472C003BB596 /* SYPopupTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A7B0C8001F7B472C003BB596 /* SYPopupView.h */,
+				A7B0C8011F7B472C003BB596 /* SYPopupView.m */,
 			);
 			path = SYPopupTableView;
 			sourceTree = "<group>";
 		};
-		A7637A411EA0B0890096433D /* SYProgressWebView */ = {
+		A7B0C8021F7B472C003BB596 /* SYProgressWebView */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A421EA0B0890096433D /* SYProgressWebView.h */,
-				A7637A431EA0B0890096433D /* SYProgressWebView.m */,
+				A7B0C8031F7B472C003BB596 /* SYProgressWebView.h */,
+				A7B0C8041F7B472C003BB596 /* SYProgressWebView.m */,
 			);
 			path = SYProgressWebView;
 			sourceTree = "<group>";
 		};
-		A7637A4A1EA0B0890096433D /* SYTypeButton */ = {
+		A7B0C80B1F7B472C003BB596 /* SYTypeButton */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A4B1EA0B0890096433D /* SYButton.h */,
-				A7637A4C1EA0B0890096433D /* SYButton.m */,
-				A7637A4D1EA0B0890096433D /* SYTypeButtonView.h */,
-				A7637A4E1EA0B0890096433D /* SYTypeButtonView.m */,
+				A7B0C80C1F7B472C003BB596 /* SYButton.h */,
+				A7B0C80D1F7B472C003BB596 /* SYButton.m */,
+				A7B0C80E1F7B472C003BB596 /* SYTypeButtonView.h */,
+				A7B0C80F1F7B472C003BB596 /* SYTypeButtonView.m */,
 			);
 			path = SYTypeButton;
 			sourceTree = "<group>";
 		};
-		A7637A4F1EA0B0890096433D /* SYUIInit */ = {
+		A7B0C8101F7B472C003BB596 /* SYUIInit */ = {
 			isa = PBXGroup;
 			children = (
-				A7637A501EA0B0890096433D /* SYAutoSizeCGRect.h */,
-				A7637A511EA0B0890096433D /* SYUIInitMethod.h */,
-				A7637A521EA0B0890096433D /* SYUIInitMethod.m */,
+				A7B0C8111F7B472C003BB596 /* SYAutoSizeCGRect.h */,
+				A7B0C8121F7B472C003BB596 /* SYUIInitMethod.h */,
+				A7B0C8131F7B472C003BB596 /* SYUIInitMethod.m */,
 			);
 			path = SYUIInit;
-			sourceTree = "<group>";
-		};
-		A78E9D681EAF43DF003D1949 /* SYNumberEditView */ = {
-			isa = PBXGroup;
-			children = (
-				A78E9D691EAF43DF003D1949 /* SYNumberEditView.h */,
-				A78E9D6A1EAF43DF003D1949 /* SYNumberEditView.m */,
-			);
-			path = SYNumberEditView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -607,7 +608,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7637A671EA0B0890096433D /* SYDeleteImage@2x.png in Resources */,
+				A7B0C8281F7B472C003BB596 /* SYDeleteImage@2x.png in Resources */,
 				A76379CE1EA0AFE00096433D /* LaunchScreen.storyboard in Resources */,
 				A76379CB1EA0AFE00096433D /* Assets.xcassets in Resources */,
 			);
@@ -634,45 +635,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7637A771EA0B0890096433D /* SYTypeButtonView.m in Sources */,
+				A7B0C83C1F7B472C003BB596 /* SYWebView.m in Sources */,
 				A76379C61EA0AFE00096433D /* ViewController.m in Sources */,
-				A7637A6F1EA0B0890096433D /* SYNetworkStatusView.m in Sources */,
-				A7637A641EA0B0890096433D /* SYCollectionView.m in Sources */,
-				A7637A581EA0B0890096433D /* SYFoundationTools.md in Sources */,
-				A7637A681EA0B0890096433D /* SYImageBrowse.m in Sources */,
-				A7637A611EA0B0890096433D /* MJDIYRefreshFooter.m in Sources */,
-				A7637A5E1EA0B0890096433D /* SYNetworkCache.m in Sources */,
-				A7637A5D1EA0B0890096433D /* SYFMDBManager.m in Sources */,
-				A7637A751EA0B0890096433D /* SYTextView.m in Sources */,
+				A7B0C83A1F7B472C003BB596 /* SYUIInitMethod.m in Sources */,
+				A7B0C8331F7B472C003BB596 /* SYPopupView.m in Sources */,
+				A7B0C8251F7B472C003BB596 /* SYCollectionView.m in Sources */,
+				A7B0C8191F7B472C003BB596 /* SYFoundationTools.md in Sources */,
+				A7B0C8291F7B472C003BB596 /* SYImageBrowse.m in Sources */,
+				A7B0C8371F7B472C003BB596 /* SYTextView.m in Sources */,
+				A7B0C8221F7B472C003BB596 /* MJDIYRefreshFooter.m in Sources */,
+				A7B0C81F1F7B472C003BB596 /* SYNetworkCache.m in Sources */,
+				A7B0C81E1F7B472C003BB596 /* SYFMDBManager.m in Sources */,
 				A76379C31EA0AFE00096433D /* AppDelegate.m in Sources */,
-				A7637A691EA0B0890096433D /* SYImageBrowseHelper.m in Sources */,
+				A7B0C82A1F7B472C003BB596 /* SYImageBrowseHelper.m in Sources */,
 				A76379C01EA0AFE00096433D /* main.m in Sources */,
-				A7637A621EA0B0890096433D /* MJDIYRefreshHeader.m in Sources */,
-				A7637A5C1EA0B0890096433D /* SYUUID.m in Sources */,
-				A7637A761EA0B0890096433D /* SYButton.m in Sources */,
-				A7637A601EA0B0890096433D /* SYLibsTools.md in Sources */,
-				A7637A5B1EA0B0890096433D /* SYUserDefaultManager.m in Sources */,
-				A7637A5A1EA0B0890096433D /* MD5Secure.m in Sources */,
-				A7637A6C1EA0B0890096433D /* iToast.m in Sources */,
-				A7637A721EA0B0890096433D /* SYProgressWebView.m in Sources */,
-				A7637A631EA0B0890096433D /* SYNetworkRequest.m in Sources */,
-				A7637A711EA0B0890096433D /* SYPopupView.m in Sources */,
-				A7637A7A1EA0B0890096433D /* SYWebView.m in Sources */,
-				A7637A791EA0B0890096433D /* SYUITools.md in Sources */,
-				A730097C1EAA0CE200439631 /* SYNetworkEnvironment.m in Sources */,
-				A7637A661EA0B0890096433D /* SYGuideScrollView.m in Sources */,
-				A7637A591EA0B0890096433D /* SYNotificationManager.m in Sources */,
-				A7637A6A1EA0B0890096433D /* SYImageBrowseView.m in Sources */,
-				A7637A651EA0B0890096433D /* SYCountDownButton.m in Sources */,
-				A7637A6B1EA0B0890096433D /* iToast+SYToast.m in Sources */,
-				A7637A781EA0B0890096433D /* SYUIInitMethod.m in Sources */,
-				A7637A571EA0B0890096433D /* SYCommons.md in Sources */,
-				A7637A701EA0B0890096433D /* SYWithoutNetworkView.m in Sources */,
-				A7637A741EA0B0890096433D /* SYTextField.m in Sources */,
-				A730097D1EAA0CE200439631 /* SYNetworkEnvironmentView.m in Sources */,
-				A7637A731EA0B0890096433D /* SYTableView.m in Sources */,
-				A7637A5F1EA0B0890096433D /* HUDManager.m in Sources */,
-				A78E9D6B1EAF43DF003D1949 /* SYNumberEditView.m in Sources */,
+				A7B0C8231F7B472C003BB596 /* MJDIYRefreshHeader.m in Sources */,
+				A7B0C81D1F7B472C003BB596 /* SYUUID.m in Sources */,
+				A7B0C8211F7B472C003BB596 /* SYLibsTools.md in Sources */,
+				A7B0C83B1F7B472C003BB596 /* SYUITools.md in Sources */,
+				A7B0C81C1F7B472C003BB596 /* SYUserDefaultManager.m in Sources */,
+				A7B0C8381F7B472C003BB596 /* SYButton.m in Sources */,
+				A7B0C82F1F7B472C003BB596 /* SYWithoutNetworkView.m in Sources */,
+				A7B0C8391F7B472C003BB596 /* SYTypeButtonView.m in Sources */,
+				A7B0C81B1F7B472C003BB596 /* MD5Secure.m in Sources */,
+				A7B0C82D1F7B472C003BB596 /* iToast.m in Sources */,
+				A7B0C8241F7B472C003BB596 /* SYNetworkRequest.m in Sources */,
+				A7B0C8271F7B472C003BB596 /* SYGuideScrollView.m in Sources */,
+				A7B0C81A1F7B472C003BB596 /* SYNotificationManager.m in Sources */,
+				A7B0C82E1F7B472C003BB596 /* SYNetworkStatusView.m in Sources */,
+				A7B0C82B1F7B472C003BB596 /* SYImageBrowseView.m in Sources */,
+				A7B0C8361F7B472C003BB596 /* SYTextField.m in Sources */,
+				A7B0C8351F7B472C003BB596 /* SYTableView.m in Sources */,
+				A7B0C8261F7B472C003BB596 /* SYCountDownButton.m in Sources */,
+				A7B0C82C1F7B472C003BB596 /* iToast+SYToast.m in Sources */,
+				A7B0C8301F7B472C003BB596 /* SYNetworkEnvironment.m in Sources */,
+				A7B0C8181F7B472C003BB596 /* SYCommons.md in Sources */,
+				A7B0C8341F7B472C003BB596 /* SYProgressWebView.m in Sources */,
+				A7B0C8201F7B472C003BB596 /* HUDManager.m in Sources */,
+				A7B0C8321F7B472C003BB596 /* SYNumberEditView.m in Sources */,
+				A7B0C8311F7B472C003BB596 /* SYNetworkEnvironmentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
