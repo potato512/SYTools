@@ -7,6 +7,12 @@
 //
 
 #import "SYPopupView.h"
+#import "UIView+SYCategory.h"
+#import "UITableView+SYCategory.h"
+#import "UITableViewCell+SYCategory.h"
+#import "SYUIInitMethod.h"
+#import "SYAutoSizeCGRect.h"
+#import "SYCommon_define.h"
 
 static NSString *const identifierCell = @"UITableViewCell";
 

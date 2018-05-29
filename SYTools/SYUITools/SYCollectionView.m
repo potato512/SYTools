@@ -7,10 +7,11 @@
 //
 
 #import "SYCollectionView.h"
+#import "UIView+Status.h"
 
 @interface SYCollectionView ()
 
-@property (nonatomic, strong) SYNetworkStatusView *statusView;
+@property (nonatomic, strong) UIView *statusView;
 
 @end
 
@@ -50,19 +51,19 @@ UICollectionViewFlowLayout *flowLayoutScrollDirectionVertical(void)
 /// 开始（菊花转）
 - (void)loadingStart
 {
-    [self.statusView loadStart];
+    [self.statusView statusViewLoadStart];
 }
 
 /// 结束，加载成功
 - (void)loadedSueccess
 {
-    [self.statusView loadSuccess];
+    [self.statusView statusViewLoadSuccess];
 }
 
 /// 结束，加载成功，无数据
 - (void)loadedSuccessWithoutData
 {
-    [self.statusView loadSuccessWithoutData:kNetworkWithoutData image:nil];
+    [self.statusView statusViewLoadSuccessWithoutData:@"还没有数据" image:nil];
 }
 
 /// 结束，加载成功，无数据（自定义标题与图标）
@@ -71,14 +72,14 @@ UICollectionViewFlowLayout *flowLayoutScrollDirectionVertical(void)
     self.scrollEnabled = NO;
     
     NSArray *images = (image ? @[image] : nil);
-    [self.statusView loadSuccessWithoutData:title image:images];
+    [self.statusView statusViewLoadSuccessWithoutData:title image:images];
 }
 
 /// 结束，加载成功，无数据
 - (void)loadedSuccessWithoutDataAndRestart:(NSString *)message image:(UIImage *)image click:(void (^)(void))restartClick
 {
     NSArray *images = (image ? @[image] : nil);
-    [self.statusView loadSuccessWithoutData:message image:images click:^{
+    [self.statusView statusViewLoadSuccessWithoutData:message image:images click:^{
         if (restartClick)
         {
             restartClick();
@@ -92,8 +93,8 @@ UICollectionViewFlowLayout *flowLayoutScrollDirectionVertical(void)
     self.scrollEnabled = NO;
     
     NSArray *images = (image ? @[image] : nil);
-    [self.statusView.reloadButton setTitle:titleButton forState:UIControlStateNormal];
-    [self.statusView loadSuccessWithoutData:message image:images click:^{
+    [self.statusView.statusButton setTitle:titleButton forState:UIControlStateNormal];
+    [self.statusView statusViewLoadSuccessWithoutData:message image:images click:^{
         if (restartClick)
         {
             restartClick();
@@ -107,13 +108,13 @@ UICollectionViewFlowLayout *flowLayoutScrollDirectionVertical(void)
     self.scrollEnabled = NO;
     
     NSArray *images = (image ? @[image] : nil);
-    [self.statusView loadFailue:message image:images];
+    [self.statusView statusViewLoadFailue:message image:images];
 }
 
 /// 结束，加载失败（重新加载）
 - (void)loadedFailueAndRestart:(void (^)(void))restartClick
 {
-    [self.statusView loadFailue:kNetworkLoadFailed image:nil click:^{
+    [self.statusView statusViewLoadFailue:@"加载失败" image:nil click:^{
         if (restartClick)
         {
             restartClick();
@@ -125,7 +126,7 @@ UICollectionViewFlowLayout *flowLayoutScrollDirectionVertical(void)
 - (void)loadedFailueAndRestart:(NSString *)message image:(UIImage *)image click:(void (^)(void))restartClick
 {
     NSArray *images = (image ? @[image] : nil);
-    [self.statusView loadFailue:message image:images click:^{
+    [self.statusView statusViewLoadFailue:message image:images click:^{
         if (restartClick)
         {
             restartClick();
@@ -133,11 +134,12 @@ UICollectionViewFlowLayout *flowLayoutScrollDirectionVertical(void)
     }];
 }
 
-- (SYNetworkStatusView *)statusView
+- (UIView *)statusView
 {
     if (!_statusView)
     {
-        _statusView = [[SYNetworkStatusView alloc] initWithView:self];
+        _statusView = [[UIView alloc] initWithFrame:self.bounds];
+        [self addSubview:_statusView];
     }
     
     return _statusView;
@@ -146,7 +148,7 @@ UICollectionViewFlowLayout *flowLayoutScrollDirectionVertical(void)
 /// 重置状态视图frame
 - (void)resetStatusViewFrame:(CGRect)rect
 {
-    [self.statusView reloadFrame:rect];
+    self.statusView.frame = rect;
 }
 
 /// 状态视图显示位置（前，或后）

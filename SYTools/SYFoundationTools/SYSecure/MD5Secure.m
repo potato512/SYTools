@@ -9,7 +9,7 @@
 #import "MD5Secure.h"
 #import <CommonCrypto/CommonDigest.h>
 
-static CGFloat FileHashSize = (1024 * 8);
+static float const FileHashSize = (1024 * 8);
 
 @implementation MD5Secure
 

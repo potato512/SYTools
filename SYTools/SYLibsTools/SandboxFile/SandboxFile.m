@@ -77,7 +77,7 @@
     NSString *path = [[self GetDocumentPath] stringByAppendingPathComponent:dir];
     if (![[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error])
     {
-        DLog(@"create dir error: %@",error.debugDescription);
+        NSLog(@"create dir error: %@",error.debugDescription);
     }
     return path;
 }
@@ -94,7 +94,7 @@
     
     if (![[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error])
     {
-        DLog(@"create dir error: %@",error.debugDescription);
+        NSLog(@"create dir error: %@",error.debugDescription);
     }
     return path;
 }
@@ -110,7 +110,7 @@
     NSString *FileDirectory = [List stringByAppendingPathComponent:Name];
     if ([self IsFileExists:Name])
     {
-        DLog(@"exist,%@", Name);
+        NSLog(@"exist,%@", Name);
     }
     else
     {

@@ -1,0 +1,6 @@
+framework module Pods_DemoSYTools {
+  umbrella header "Pods-DemoSYTools-umbrella.h"
+
+  export *
+  module * { export * }
+}

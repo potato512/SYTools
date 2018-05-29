@@ -7,6 +7,11 @@
 //
 
 #import "SYTextView.h"
+#import "UIView+SYCategory.h"
+#import "SYUIInitMethod.h"
+#import "NSObject+SYCategory.h"
+#import "NSString+SYCategory.h"
+
 
 #define originX 8.0
 #define originY 6.0

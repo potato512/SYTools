@@ -102,7 +102,7 @@
     
     if (self.showKeyboard && self.isFirstResponder)
     {
-        NSNotificationCenterReceive(UIKeyboardWillShowNotification, self, @selector(showKeyboard:));
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showKeyboard:) name:UIKeyboardWillShowNotification object:nil];
     }
     
     return YES;
@@ -117,7 +117,7 @@
     
     if (self.hiddenKeyboard && self.isFirstResponder)
     {
-        NSNotificationCenterReceive(UIKeyboardDidHideNotification, self, @selector(hiddenKeyboard:));
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hiddenKeyboard:) name:UIKeyboardDidHideNotification object:nil];
     }
     
     return YES;

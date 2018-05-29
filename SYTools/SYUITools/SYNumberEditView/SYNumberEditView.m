@@ -7,6 +7,7 @@
 //
 
 #import "SYNumberEditView.h"
+#import "SYIToast+SYCategory.h"
 
 #define borderCornerMin 0.0
 #define borderCornerMax (self.frame.size.height / 2)

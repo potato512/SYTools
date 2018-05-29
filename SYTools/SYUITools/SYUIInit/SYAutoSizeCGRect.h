@@ -13,19 +13,25 @@
 
 /*
  各版本尺寸
- 1 iPhone4      640*960   320*480 2倍
- 2 iPhone4S     640*960   320*480 2倍
- 3 iPhone5      640*1136  320*568 2倍
- 4 iPhone5S     640*1136  320*568 2倍
- 5 iPhone5C     640*1136  320*568 2倍
- 6 iPhone6      750*1334  375*667 2倍
- 7 iPhone6 Plus 1242*2208 414*736 3倍
+ 01 iPhone4      3.5 640*960   320*480 @2x
+ 02 iPhone4S     3.5 640*960   320*480 @2x
+ 03 iPhone5      4.0 640*1136  320*568 @2x
+ 04 iPhone5S     4.0 640*1136  320*568 @2x
+ 05 iPhone5C     4.0 640*1136  320*568 @2x
+ 06 iPhone6      4.7 750*1334  375*667 @2x
+ 07 iPhone6Plus  5.5 1242*2208 414*736 @3x
+ 08 iPhone7      4.7 750*1334  375*667 @2x
+ 09 iPhone7Plus  5.5 1242*2208 414*736 @3x
+ 10 iPhone8      4.7 750*1334  375*667 @2x
+ 11 iPhone8Plus  5.5 1242*2208 414*736 @3x
+ 12 iPhoneX      5.8 1125*2436 375*812 @3x
  
  各版本比例
  iPhone5，    autoSizeScaleX=1，autoSizeScaleY=1；
  iPhone6，    autoSizeScaleX=1.171875，autoSizeScaleY=1.17429577；
  iPhone6Plus，autoSizeScaleX=1.29375， autoSizeScaleY=1.295774；
-*/
+ iPhoneX，    autoSizeScaleX=1.7578125， autoSizeScaleY=2.144366197183099；
+ */
 
 #define SYIS_IPAD_AutoSize             (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define SYIS_IPHONE_AutoSize           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
@@ -40,6 +46,7 @@
 #define SYIS_IPHONE_5_AutoSize         (SYIS_IPHONE_AutoSize && SYSCREEN_MAX_LENGTH_AutoSize == 568.0)
 #define SYIS_IPHONE_6_AutoSize         (SYIS_IPHONE_AutoSize && SYSCREEN_MAX_LENGTH_AutoSize == 667.0)
 #define SYIS_IPHONE_6P_AutoSize        (SYIS_IPHONE_AutoSize && SYSCREEN_MAX_LENGTH_AutoSize == 736.0)
+#define SYIS_IPHONE_X_AutoSize         (SYIS_IPHONE_AutoSize && SYSCREEN_MAX_LENGTH_AutoSize == 812.0)
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -48,7 +55,7 @@
 #define SYAutoSizeScreenHeight_AutoSize ([[UIScreen mainScreen] bounds].size.height)
 
 #define SYAutoSizeScaleX_AutoSize ((SYAutoSizeScreenHeight_AutoSize > 480.0) ? (SYAutoSizeScreenWidth_AutoSize / 320.0) : 1.0)
-#define SYAutoSizeScaleY_AutoSize ((SYAutoSizeScreenHeight_AutoSize > 480.0) ? (SYAutoSizeScreenHeight_AutoSize / 568.0) : 1.0)
+#define SYAutoSizeScaleY_AutoSize ((SYAutoSizeScreenHeight_AutoSize > 480.0) ? ((SYAutoSizeScreenHeight_AutoSize >= 812.0) ? (SYAutoSizeScreenHeight_AutoSize / 667.0) : (SYAutoSizeScreenHeight_AutoSize / 568.0)) : 1.0)
 
 #define SYAutoSizeScalesX (SYAutoSizeScaleX_AutoSize)
 #define SYAutoSizeScalesY (SYAutoSizeScaleY_AutoSize)
@@ -155,6 +162,75 @@ SYAutoSizeGetWidth(CGFloat width)
 {
     CGFloat autoWidth = width * SYAutoSizeScaleX_AutoSize;
     return autoWidth;
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+#define kScreenHeightiPhoneX [UIScreen mainScreen].bounds.size.height
+#define kScreenWidthiPhoneX  [UIScreen mainScreen].bounds.size.width
+#define isIPoneX (kScreenHeightiPhoneX == 812.0f ? YES : NO)
+
+///
+#define kHeightCoefficientiPhoneX (isIPoneX ? 667.0f / 667.0f : kScreenHeightiPhoneX / 667.0f)
+
+///
+#define kHeightStatusSafeArea (isIPoneX ? 44.0f : 20.0f)
+///
+#define kHeightNavigationSafeArea (44.0f)
+///
+#define kHeightStatusNavigationSafeArea (kHeightStatusSafeArea + kHeightNavigationSafeArea)
+///
+#define kHeightBottomSafeArea (isIPoneX ? 34.0f : 0.0f)
+
+CG_INLINE CGFloat
+SYGetTop(CGFloat y, BOOL hiddenNav)
+{
+    CGFloat result = (hiddenNav ? (kHeightStatusSafeArea + y) : y);
+    return result;
+}
+
+CG_INLINE CGFloat
+SYGetBottom(CGFloat y, BOOL hiddenNav)
+{
+    CGFloat result = (hiddenNav ? (y - kHeightBottomSafeArea) : y);
+    return result;
+}
+
+CG_INLINE CGFloat
+SYGetHeightTop(CGFloat height, BOOL hiddenNav)
+{
+    CGFloat result = (hiddenNav ? (kHeightStatusSafeArea + height) : height);
+    return result;
+}
+
+CG_INLINE CGFloat
+SYGetHeightBottom(CGFloat height, BOOL hiddenTap)
+{
+    CGFloat result = (hiddenTap ? (kHeightBottomSafeArea + height) : height);
+    return result;
+}
+
+/// iPhoneX适配
+CG_INLINE CGRect
+SYCGRectMakeSafeArea(CGFloat x, CGFloat y, CGFloat width, CGFloat height, BOOL hiddenNav, BOOL hiddenTab, BOOL isTop)
+{
+    CGRect rect;
+    rect.origin.x = x;
+    rect.origin.y = y;
+    rect.size.width = width;
+    rect.size.height = height;
+    if (isTop)
+    {
+        // 顶端时
+        rect.size.height = (hiddenNav ? (kHeightStatusSafeArea + height) : height);
+    }
+    else
+    {
+        // 底部时
+        rect.origin.y = (hiddenTab ? (y - kHeightBottomSafeArea) : y);
+        rect.size.height = (hiddenTab ? (kHeightBottomSafeArea + height) : height);
+    }
+    return rect;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////

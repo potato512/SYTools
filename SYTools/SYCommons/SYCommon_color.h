@@ -6,6 +6,8 @@
 //  Copyright (c) 2014年 zhangshaoyu. All rights reserved.
 //  功能描述：常用颜色
 
+#import "SYCommon_Image.h"
+
 #ifndef zhangshaoyu_Common_color_h
 #define zhangshaoyu_Common_color_h
 
@@ -103,17 +105,15 @@
 /// 高雅黑
 #define kColorElegantBlack UIColorRGB(29, 31, 38)
 
-/// 按钮透明颜色
+/// 按钮背景透明颜色
 #define kColorButtonNormal kImageWithColor(kColorClear)
-
-/// 按钮点击颜色
+/// 按钮背景点击颜色
 #define kColorButtonHighlight kImageWithColor(UIColorHex_Alpha(0x000000, 0.3))
+/// 按钮背景不可点击颜色
+#define kColorButtonDisabled UIColorHex(0xcccccc)
 
-/// 按钮点击颜色
+/// 按钮标题点击颜色
 #define kColorButtonTitleHighlight UIColorHex_Alpha(0x000000, 0.3)
-
-/// 按钮点击颜色
-#define kColorButtonBgDisabled UIColorHex(0xcccccc)
 
 /********************** Color ****************************/
 

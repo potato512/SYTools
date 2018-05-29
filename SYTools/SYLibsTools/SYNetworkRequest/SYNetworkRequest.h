@@ -27,6 +27,21 @@
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
 
+static NSString *const kNotificationNameUnReachable = @"NetworkNotReachable";
+static NSString *const kNotificationNameReachable   = @"NetworkReachable";
+/*
+ // 接收网络状态变化通知，并执行相关方法
+ // 没有网络状态通知
+ [[NSNotificationCenter defaultCenter] receiveNotificationWithName:kNotificationNameUnReachable target:self selector:@selector(networkUnReachability:)];
+ - (void)networkUnReachability:(NSNotification *)notification
+ { }
+ // 有网络状态通知
+ [[NSNotificationCenter defaultCenter] receiveNotificationWithName:kNotificationNameReachable target:self selector:@selector(networkReachability:)];
+ - (void)networkReachability:(NSNotification *)notification
+ { }
+*/
+
+
 /// 异常情况（外网异常、外网异常有缓存、外网异常无缓存、服务器异常、服务器异常有缓存、服务器异常无缓存）
 typedef NS_ENUM(NSInteger, RequestNetworkStatus)
 {
@@ -138,6 +153,9 @@ typedef NS_ENUM(NSInteger, RequestHttpType)
  */
 + (BOOL)isWWAN;
 
+/// 网络情况判断
++ (void)netWorkReachability:(void (^)(AFNetworkReachabilityStatus status))handle;
+
 /**
  *  网络判断
  *
@@ -166,8 +184,32 @@ typedef NS_ENUM(NSInteger, RequestHttpType)
                                  methord:(NSString *)methord
                           uploadProgress:(void (^)(NSProgress *progress))uploadProgress
                         downloadProgress:(void (^)(NSProgress *progress))downloadProgress
-                                complete:(void (^)(NSURLResponse *response, id responseObject,  NSError *error))complete;
+                                complete:(void (^)(NSURLResponse *response, id responseObject, NSError *error))complete;
 
+#pragma mark https请求（GET/POST/PUT/DELETE/HEAD/PATCH）
+
+/**
+ *  https网络请求（GET/POST/PUT/DELETE/HEAD/PATCH）
+ *
+ *  @param url              请求地址
+ *  @param dict             请求参数
+ *  @param methord          请求方式（GET/POST/PUT/DELETE/HEAD/PATCH）
+ *  @param isCertificates   是否忽略自建证书（NO时证书无效）
+ *  @param certificatesFile 证书名称（如：httpsFile.cer）
+ *  @param uploadProgress   上传进度回调
+ *  @param downloadProgress 下载进度回调
+ *  @param complete         请求结果回调
+ *
+ *  @return NSURLSessionDataTask
+ */
+- (NSURLSessionDataTask *)requestWithUrl:(NSString *)url
+                              parameters:(NSDictionary *)dict
+                                 methord:(NSString *)methord
+                          isCertificates:(BOOL)isCertificates
+                            certificates:(NSString *)certificatesFile
+                          uploadProgress:(void (^)(NSProgress *progress))uploadProgress
+                        downloadProgress:(void (^)(NSProgress *progress))downloadProgress
+                                complete:(void (^)(NSURLResponse *response, id responseObject, NSError *error))complete;
 
 #pragma mark 文件上传请求
 

@@ -47,6 +47,9 @@ static NSString *const kSymbolMarkUparrow            = @"^";
 /// 分隔或拼接符号，星号
 static NSString *const kSymbolStar                   = @"*";
 
+/// 分隔或拼接符号，圆点
+static NSString *const kSymbolDot                    = @".";
+
 /// 人民币标识符号
 static NSString *const kSymbolMoneyCN                = @"￥";
 /// 美元标识符号

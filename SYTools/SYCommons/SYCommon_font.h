@@ -20,7 +20,7 @@
 #define kAutoFontBoldWithSize(size) [UIFont boldSystemFontOfSize:SYAutoSizeGetWidth(size)]
 
 /// 是否适配
-static BOOL const isAutoFont = 1;
+static BOOL const isAutoFont = 0;
 
 #pragma mark - 大小-细体
 

@@ -17,10 +17,10 @@
 #import "SYImageBrowser.h"
 #import "SYNetworkEnvironment.h"
 #import "SYNetworkStatusView.h"
-#import "SYWithoutNetworkView.h"
-#import "SYNumberEditView.h"
-#import "SYNoticeBrowseLabel.h"
 #import "SYPageControl.h"
+#import "SYCountDownButton.h"
+#import "SYFlashLight.h"
+#import "BarCodeManager.h"
 
 #import "SYWebView.h"
 #import "SYTextView.h"

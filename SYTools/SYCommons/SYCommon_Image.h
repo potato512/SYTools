@@ -6,6 +6,11 @@
 //  Copyright (c) 2014年 zhangshaoyu. All rights reserved.
 //  功能描述：常用图片
 
+
+#import "UIImage+SYCategory.h"
+#import "SYCommon_color.h"
+
+
 #ifndef Common_Image_h
 #define Common_Image_h
 
@@ -36,36 +41,17 @@
 
 #pragma mark - 常用图片
 
-/// 默认图标-广告栏
-#define kImageDefaultADIcon     kImageWithName(@"AD_default")
-
-/// 默认图标
-#define kImageDefault           kImageWithName(@"defaultImage")
-
-/// 默认图标-头像
-#define kImageHeaderDefault     kImageWithName(@"headerDefaultIcon")
-
-/// 默认图标-商品图片
-#define kImageProductDefault    kImageWithName(@"goodsImage_default")
-
-/// 默认图标-背景图标
-#define kImageBackgroundDefault kImageWithName(@"bgImageDefault")
-
-
 /// cell透明背景色
-//#define kImage_cellClear [[UIImage imageWithColor:kColorClear size:CGSizeMake(1.0, 1.0)] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 60, 0, 80) resizingMode:UIImageResizingModeStretch]
-
+#define kImageCellClear [[UIImage imageWithColor:kColorClear size:CGSizeMake(1.0, 1.0)] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 60, 0, 80) resizingMode:UIImageResizingModeStretch]
 /// cell未选择时背景色
-//#define kImage_cellNormal [[UIImage imageWithColor:kColorWhite size:CGSizeMake(1.0, 1.0)] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 60, 0, 80) resizingMode:UIImageResizingModeStretch]
-
+#define kImageCellNormal [[UIImage imageWithColor:kColorWhite size:CGSizeMake(1.0, 1.0)] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 60, 0, 80) resizingMode:UIImageResizingModeStretch]
 /// cell选择时背景色
-//#define kImage_cellSelected [[UIImage imageWithColor:UIColorHex(0xfcf8cd) size:CGSizeMake(1.0, 1.0)] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 60, 0, 80) resizingMode:UIImageResizingModeStretch]
+#define kImageCellHighlight [[UIImage imageWithColor:UIColorHex(0xfcf8cd) size:CGSizeMake(1.0, 1.0)] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 60, 0, 80) resizingMode:UIImageResizingModeStretch]
 
 /// 按钮透明颜色
-//#define kImageButtonNormal kImageWithColor(kColorClear)
-
+#define kImageButtonNormal kImageWithColor(kColorClear)
 /// 按钮点击颜色
-//#define kImageButtonHighlight kImageWithColor(UIColorHex_Alpha(0x000000, 0.3))
+#define kImageButtonHighlight kImageWithColor(UIColorHex_Alpha(0x000000, 0.3))
 
 /********************** image ****************************/
 

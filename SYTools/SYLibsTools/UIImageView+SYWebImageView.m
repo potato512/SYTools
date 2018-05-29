@@ -8,7 +8,7 @@
 
 #import "UIImageView+SYWebImageView.h"
 #import <objc/runtime.h>
-#import "YYKit.h"
+#import <YYKit/YYKit.h>
 
 @interface UIImageView ()
 

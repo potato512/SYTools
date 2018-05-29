@@ -10,7 +10,7 @@
 #import "SYCommon_define.h"
 #import "SYUIToolsHeader.h"
 #import "SYFoundationToolsHeader.h"
-//#import "SYLibsToolsHeader.h"
+#import "SYLibsToolsHeader.h"
 
 
 #ifndef SYToolsHeader_h

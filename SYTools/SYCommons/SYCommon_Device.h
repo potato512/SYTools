@@ -57,28 +57,33 @@
 #pragma mark - 设备尺寸
 
 /// 全屏宽度
-#define kScreenWidth        [UIScreen mainScreen].applicationFrame.size.width
+#define kWidthScreen        [UIScreen mainScreen].applicationFrame.size.width
 
 /// 全屏高度，不含状态栏高度
-#define kScreenHeight       [UIScreen mainScreen].applicationFrame.size.height
+#define kHeightScreen       [UIScreen mainScreen].applicationFrame.size.height
 
 /// 全屏高度，含状态栏高度
-#define kAllHeight          ([UIScreen mainScreen].applicationFrame.size.height + 20.0)
+#define kHeightAll          ([UIScreen mainScreen].applicationFrame.size.height + 20.0)
 
 /// 视图控制器高度，不含导航栏控制器高度
-#define kBodyHeight         ([UIScreen mainScreen].applicationFrame.size.height - 44.0)
+#define kHeightBody         ([UIScreen mainScreen].applicationFrame.size.height - 44.0)
 
 /// tabbar切换视图控制器高度
-static CGFloat const kTabbarHeight       = 49.0;
+static CGFloat const kHeightTabbar       = 49.0;
 
 /// 搜索视图高度
-static CGFloat const kSearchBarHeight    = 45.0;
+static CGFloat const kHeightSearchBar    = 45.0;
 
 /// 状态栏高度
-static CGFloat const kStatusBarHeight    = 20.0;
+static CGFloat const kHeightStatusBar    = 20.0;
 
 /// 导航栏高度
-static CGFloat const kNavigationHeight   = 44.0;
+static CGFloat const kHeightNavigation   = 44.0;
+
+/// 状态栏顶端安全区域高度（iPhoneX）
+static CGFloat const kHeightTopSafe      = 24.0;
+/// 底端安全区域高度（iPhoneX）
+static CGFloat const kHeightBottomSafe   = 34.0;
 
 #pragma mark - 设备类型
 
@@ -111,6 +116,8 @@ static CGFloat const kNavigationHeight   = 44.0;
 /// iPhone6Plus设备
 #define isIPHONE6P (isIPHONE && (MAX(([[UIScreen mainScreen] bounds].size.width), ([[UIScreen mainScreen] bounds].size.height))) == 736.0)
 
+/// iPhoneX设备
+#define isIPHONEX (isIPHONE && (MAX(([[UIScreen mainScreen] bounds].size.width), ([[UIScreen mainScreen] bounds].size.height))) == 812.0)
 
 /// 获取设备系统号
 #define GetSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
