@@ -8,9 +8,6 @@
 
 
 #import "SYSecureTools.h"
-#import "SYUserDefaultManager.h"
-#import "SYNotificationManager.h"
-#import "SYUUID.h"
 
 #ifndef SYFoundationToolsHeader_h
 #define SYFoundationToolsHeader_h

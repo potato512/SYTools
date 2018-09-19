@@ -22,7 +22,7 @@ static NSTimeInterval const kAnimationsTime = 0.3;
 #pragma mark - 宽高限制
 
 /// 分割线高度
-static CGFloat const kSeparatorLineHeight = 0.5;
+static CGFloat const kLineHeight = 0.5;
 
 /// IQKeyboard与输入控件间距
 static CGFloat const kIQKeyboardDistanceFromTextField = 10.0;

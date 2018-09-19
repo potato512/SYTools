@@ -8,31 +8,33 @@
 
 #import "HUDManager.h"
 
-// 导入头文件 用于显示指示器的背景视图
-#import "AppDelegate.h"
-
 // 定义变量
 static MBProgressHUD *mbProgressHUD;
+static UITapGestureRecognizer *tapRecognizer;
 
 @implementation HUDManager
 
-+ (void)showHUD:(MBProgressHUDMode)mode hide:(BOOL)autoHide afterDelay:(NSTimeInterval)timeDelay enabled:(BOOL)autoEnabled message:(NSString *)aMessage
++ (void)showHUD:(MBProgressHUDMode)mode hide:(BOOL)autoHide afterDelay:(NSTimeInterval)timeDelay enabled:(BOOL)isEnabled message:(NSString *)message view:(UIView *)view customView:(UIView *)customview
 {
     // 如果已存在，则从父视图移除
-    if (mbProgressHUD.superview)
-    {
+    if (mbProgressHUD.superview) {
+        if (tapRecognizer.view) {
+            [mbProgressHUD removeGestureRecognizer:tapRecognizer];
+            tapRecognizer = nil;
+        }
+        
         [mbProgressHUD removeFromSuperview];
         mbProgressHUD = nil;
     }
-    
-    // 创建显示视图
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     
     // 方法1
     //mbProgressHUD = [[MBProgressHUD alloc] initWithWindow:delegate.window];
     //[delegate.window addSubview:mbProgressHUD];
     // 方法2
-    mbProgressHUD = [MBProgressHUD showHUDAddedTo:delegate.window animated:YES];
+    if (view == nil) {
+        view = [[UIApplication sharedApplication].delegate window];
+    }
+    mbProgressHUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
 
     /*
      MBProgressHUDModeIndeterminate            // 显示风火轮滚动（默认方式）
@@ -46,80 +48,77 @@ static MBProgressHUD *mbProgressHUD;
     [mbProgressHUD setMode:mode];
     
     // 如果是自定义图标模式，则显示
-    if (mode == MBProgressHUDModeCustomView)
-    {
-        /*
-        UIImageView *customImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-        
-        if (showType == HUDOperationSuccess)
-            customImgView.image = [UIImage imageNamed:@"Login_btn_Right.png"];
-        else if (showType == HUDOperationFailed)
-            customImgView.image = [UIImage imageNamed:@"Unify_Image_w7.png"];
-        
-        HUD.customView = customImgView;
-         */
-        
-        // 设置自定义图标
-        UIImageView *customImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Custom_Image.png"]];
-        [mbProgressHUD setCustomView:customImageView];
-    }
-    
-    // 如果是填充模式
-    if (mode == MBProgressHUDModeDeterminate || mode == MBProgressHUDModeAnnularDeterminate || mode == MBProgressHUDModeDeterminateHorizontalBar)
-    {
-        // 方法1
-        // 方法1 无效
-        /*
-        float progress = 0.0f;
-        while (progress < 1.0f)
-        {
-            progress += 0.01f;
-            [mbProgressHUD setProgress:progress];
-            usleep(50000);
-        }
-        */
-        
-        // 方法2
-        [mbProgressHUD showWhileExecuting:@selector(showProgress) onTarget:self withObject:nil animated:YES];
+    if (mode == MBProgressHUDModeCustomView && customview && [customview isKindOfClass:[UIView class]]) {
+        [mbProgressHUD setCustomView:customview];
     }
     
     // 设置标示标签
-    [mbProgressHUD setLabelText:aMessage];
+    mbProgressHUD.label.text = message;
 
     // 设置显示类型 出现或消失
     [mbProgressHUD setAnimationType:MBProgressHUDAnimationZoomOut];
     
     // 显示
-    [mbProgressHUD show:YES];
+    [mbProgressHUD showAnimated:YES];
+    //
+    tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideClick)];
+    [mbProgressHUD addGestureRecognizer:tapRecognizer];
     
     // 加上这个属性才能在HUD还没隐藏的时候点击到别的view
-    // 取反，即!autoEnabled
-    [mbProgressHUD setUserInteractionEnabled:!autoEnabled];
+    [mbProgressHUD setUserInteractionEnabled:isEnabled];
     
     // 隐藏后从父视图移除
     [mbProgressHUD setRemoveFromSuperViewOnHide:YES];
     
     // 设置自动隐藏
-    if (autoHide)
-    {
-        [mbProgressHUD hide:autoHide afterDelay:timeDelay];
+    if (autoHide) {
+        [mbProgressHUD hideAnimated:autoHide afterDelay:timeDelay];
     }
 }
 
-+ (void)hiddenHUD
++ (void)showHUD:(MBProgressHUDMode)mode hide:(BOOL)autoHide afterDelay:(NSTimeInterval)timeDelay enabled:(BOOL)isEnabled message:(NSString *)message view:(UIView *)view
 {
-    [mbProgressHUD hide:YES];
+    [self showHUD:mode hide:autoHide afterDelay:timeDelay enabled:isEnabled message:message view:view customView:nil];
 }
 
-+ (void)showProgress
++ (void)showHUD:(MBProgressHUDMode)mode hide:(BOOL)autoHide afterDelay:(NSTimeInterval)timeDelay enabled:(BOOL)isEnabled message:(NSString *)message
 {
-    float progress = 0.0f;
-    while (progress < 1.0f)
-    {
-        progress += 0.05f;
-        [mbProgressHUD setProgress:progress];
-        usleep(50000);
-    }
+    [self showHUD:mode hide:autoHide afterDelay:timeDelay enabled:isEnabled message:message view:nil customView:nil];
+}
+
+/// 显示在指定视图并自动隐藏（菊花转）
++ (void)showHUDIndeterminateWithMessage:(NSString *)message view:(UIView *)view
+{
+    [self showHUD:MBProgressHUDModeIndeterminate hide:YES afterDelay:1.2 enabled:YES message:message view:view customView:nil];
+}
+
+/// 显示后自动隐藏（菊花转）
++ (void)showHUDIndeterminateWithMessage:(NSString *)message
+{
+    [self showHUDIndeterminateWithMessage:message view:nil];
+}
+
+/// 显示在指定视图并自动隐藏
++ (void)showHUDWithMessage:(NSString *)message view:(UIView *)view
+{
+    [self showHUD:MBProgressHUDModeText hide:YES afterDelay:1.2 enabled:YES message:message view:view customView:nil];
+}
+
+/// 显示后自动隐藏
++ (void)showHUDWithMessage:(NSString *)message
+{
+    [self showHUDWithMessage:message view:nil];
+}
+
+/// 隐藏
++ (void)hideHUD
+{
+    [mbProgressHUD hideAnimated:YES];
+}
+
++ (void)hideClick
+{
+    [self hideHUD];
 }
 
 @end

@@ -8,7 +8,6 @@
 
 #import "SYTextView.h"
 #import "UIView+SYCategory.h"
-#import "SYUIInitMethod.h"
 #import "NSObject+SYCategory.h"
 #import "NSString+SYCategory.h"
 
@@ -64,7 +63,9 @@
 {
     self.delegate = self;
     
-    self.placeHolderlabel = InsertLabel(self, CGRectMake(originX, originY, (self.width - originX * 2), 0.0), NSTextAlignmentLeft, nil, nil, nil, NO);
+    self.placeHolderlabel = [[UILabel alloc] initWithFrame:CGRectMake(originX, originY, (self.width - originX * 2), 0.0)];
+    [self addSubview:self.placeHolderlabel];
+    self.placeHolderlabel.textAlignment = NSTextAlignmentLeft;
     self.placeHolderlabel.numberOfLines = 0;
     self.placeHolderlabel.hidden = YES;
 }

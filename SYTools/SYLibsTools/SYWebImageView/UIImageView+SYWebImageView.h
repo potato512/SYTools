@@ -22,6 +22,6 @@
  *  @param showActivity     是否显示活动图
  *  @param reload           加载失败时是否可点击重新加载
  */
-- (void)setImageWithUrl:(NSString *)url imagePlaceholder:(UIImage *)imagePlaceholder imageFailure:(UIImage *)imageFailure textLoading:(NSString *)textLoading textFailure:(NSString *)textFailure showProgress:(BOOL)showProgress showActivity:(BOOL)showActivity reloadWhileFailure:(BOOL)reload;
+- (void)imageWithUrl:(NSString *)url imagePlaceholder:(UIImage *)imagePlaceholder imageFailure:(UIImage *)imageFailure textLoading:(NSString *)textLoading textFailure:(NSString *)textFailure showProgress:(BOOL)showProgress showActivity:(BOOL)showActivity reloadWhileFailure:(BOOL)reload;
 
 @end

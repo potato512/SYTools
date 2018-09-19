@@ -29,7 +29,7 @@
 
 @implementation UIImageView (SYWebImageView)
 
-- (void)setImageWithUrl:(NSString *)url imagePlaceholder:(UIImage *)imagePlaceholder imageFailure:(UIImage *)imageFailure textLoading:(NSString *)textLoading textFailure:(NSString *)textFailure showProgress:(BOOL)showProgress showActivity:(BOOL)showActivity reloadWhileFailure:(BOOL)reload
+- (void)imageWithUrl:(NSString *)url imagePlaceholder:(UIImage *)imagePlaceholder imageFailure:(UIImage *)imageFailure textLoading:(NSString *)textLoading textFailure:(NSString *)textFailure showProgress:(BOOL)showProgress showActivity:(BOOL)showActivity reloadWhileFailure:(BOOL)reload
 {
     self.url = url;
     self.imageHolder = imagePlaceholder;
@@ -159,7 +159,7 @@
 
 - (void)tapClick:(UITapGestureRecognizer *)recognizer
 {
-    [self setImageWithUrl:self.url imagePlaceholder:self.imageHolder imageFailure:self.imageFailure textLoading:self.textLoading textFailure:self.textFailure showProgress:self.showProgress showActivity:self.showActivity reloadWhileFailure:self.shouldReload];
+    [self imageWithUrl:self.url imagePlaceholder:self.imageHolder imageFailure:self.imageFailure textLoading:self.textLoading textFailure:self.textFailure showProgress:self.showProgress showActivity:self.showActivity reloadWhileFailure:self.shouldReload];
 }
 
 #pragma mark - getter/setter
