@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SYTools"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "SYTools contant tools such as refresh, cache manager, hud manager and so on."
   s.homepage     = "https://github.com/potato512/SYTools"
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -18,7 +18,5 @@ Pod::Spec.new do |s|
   s.dependency 'YYKit'
   s.dependency 'FMDB'
   s.dependency 'LKDBHelper'
-  s.dependency 'SYAlertView'
-  s.dependency 'SYTypeButtonView'
   s.dependency 'SYNetworkEnvironment'
 end
