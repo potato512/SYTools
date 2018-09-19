@@ -18,4 +18,7 @@ Pod::Spec.new do |s|
   s.dependency 'YYKit'
   s.dependency 'FMDB'
   s.dependency 'LKDBHelper'
+  s.dependency 'SYAlertView'
+  s.dependency 'SYTypeButtonView'
+  s.dependency 'SYNetworkEnvironment'
 end
